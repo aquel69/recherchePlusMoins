@@ -60,9 +60,7 @@ public class Combinaison {
 		return chiffreString;
 	}
 		
-	private byte[] getChiffres() {
-		return chiffres;
-	}
+	
 
 	
 	

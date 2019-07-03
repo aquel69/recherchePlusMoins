@@ -1,5 +1,7 @@
 package fr.alex.main;
 
+import java.util.List;
+
 public abstract class Joueur {
 	String nom;
 	Combinaison propositionCombinaison;
@@ -13,6 +15,6 @@ public abstract class Joueur {
 	
 	public abstract Combinaison DonnerCombinaisonMystere();
 	
-	public abstract Combinaison ProposerCombinaison();
+	public abstract Combinaison ProposerCombinaison(List<Combinaison> propositionsCombinaison, List<String> indices);
 	
 }

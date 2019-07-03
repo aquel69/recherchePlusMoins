@@ -1,5 +1,6 @@
 package fr.alex.main;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Humain extends Joueur {
@@ -33,14 +34,15 @@ public class Humain extends Joueur {
 		}
 		
 		//fonction qui demande une proposition de combinaison au joueur et conversion en tableau byte
-		public Combinaison ProposerCombinaison() {
+		public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison,
+				List<String> indices) {
 			
 			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			byte [] combinaisonByte = new byte[4];
 			String combinaisonString;
 			
-			System.out.println(nom + " veuillez proposer une combinaison à 4 chiffres : ");
+			System.out.println("\n" + nom + " veuillez proposer une combinaison à 4 chiffres : ");
 			combinaisonString = sc.nextLine();
 			
 			
@@ -53,6 +55,17 @@ public class Humain extends Joueur {
 			Combinaison combinaison = new Combinaison(combinaisonByte);
 			
 			return combinaison;
+		}
+
+		public String DonnerLesIndices() {
+			@SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+			String indices;
+			
+			System.out.println("Donner les indices correspondant à la proposition : ");
+			indices = sc.nextLine();
+			
+			return indices;
 		}
 	
 	

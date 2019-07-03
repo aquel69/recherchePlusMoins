@@ -6,13 +6,13 @@ import java.util.List;
 public class PartieClassique {
 	Joueur joueurAttaquant;
 	Joueur joueurDefenseur;
-	static Combinaison combinaisonMystere;
+	private Combinaison combinaisonMystere;
 	
 
 	static int nombreIndiceEgale = 0;
-	static int nbDeCoupJoue = 0;
+	private int nbDeCoupJoue = 0;
 		
-	static List<Combinaison> propositionsCombinaison;
+	private List<Combinaison> propositionsCombinaison;
 	private List<String> indices;
 	
 	public PartieClassique() {
@@ -30,7 +30,7 @@ public class PartieClassique {
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
 		
 		do {
-			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison();
+			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaison, indices);
 			String affichageIndice = combinaisonMystere.Comparer(combinaisonProposee);
 			propositionsCombinaison.add(combinaisonProposee);
 			indices.add(affichageIndice);

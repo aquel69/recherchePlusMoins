@@ -1,5 +1,6 @@
 package fr.alex.main;
 
+import java.util.List;
 import java.util.Random;
 
 public class Ordinateur extends Joueur {
@@ -35,8 +36,14 @@ public class Ordinateur extends Joueur {
 		
 	}
 	
+	
+	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
+			
+		return null;
+	}
+	
 	//fonction qui demande une proposition de combinaison à l'ordinateur
-	public Combinaison ProposerCombinaison() {
+	/**public Combinaison ProposerCombinaison() {
 		
 		byte [] combinaisonByte = new byte[4];
 		//byte [] combMyst = new byte[4];
@@ -95,7 +102,7 @@ public class Ordinateur extends Joueur {
 		
 		Combinaison combinaison = new Combinaison(combinaisonByte);
 		return combinaison;
-	}
+	}*/
 	
 	public int convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
 		int chiffre;
