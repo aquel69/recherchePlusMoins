@@ -1,25 +1,11 @@
 package fr.alex.main;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class PartieClassique {
-	Joueur joueurAttaquant;
-	Joueur joueurDefenseur;
-	private Combinaison combinaisonMystere;
+public class PartieChallenger extends Parties {
 	
-
-	static int nombreIndiceEgale = 0;
-	private int nbDeCoupJoue = 0;
-		
-	private List<Combinaison> propositionsCombinaison;
-	private List<String> indices;
-	
-	public PartieClassique() {
-		super();
-	}
-	
-	public PartieClassique(Joueur jAttaquant, Joueur jDefenseur) {
+	public PartieChallenger(Joueur jDefenseur,Joueur jAttaquant) {
+		super(jDefenseur, jAttaquant);
 		joueurAttaquant = jAttaquant;
 		joueurDefenseur = jDefenseur;
 		propositionsCombinaison = new ArrayList<Combinaison>();
@@ -41,7 +27,7 @@ public class PartieClassique {
 		System.out.println(AfficherResultat());
 	}
 	
-	private void affichageJeuEnCours() {
+	public void affichageJeuEnCours() {
 		 for(int i = 0; i < propositionsCombinaison.size(); i++) {
 			System.out.print("combinaison " + propositionsCombinaison.get(i));
 			System.out.println(" / indices correspondant " + indices.get(i) + "\n");
@@ -52,13 +38,14 @@ public class PartieClassique {
 		String messageFinal = "";
 			
 			if(nombreIndiceEgale == 4)
-				messageFinal = joueurAttaquant.nom + " tu as gagné!!!";
+				messageFinal = joueurAttaquant.nom + " tu as gagné en : " + nbDeCoupJoue + " coups !!!";
 			else messageFinal = joueurDefenseur.nom + " tu as gagné!!!";
 				
 		return messageFinal;
 	}
 
-	public Combinaison getCombinaisonMystere() {
+	/*public Combinaison getCombinaisonMystere() {
 		return combinaisonMystere;
-	}	
+	}*/
+
 }

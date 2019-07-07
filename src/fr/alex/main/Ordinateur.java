@@ -6,7 +6,7 @@ import java.util.Random;
 public class Ordinateur extends Joueur {
 	
 	Random random = new Random();
-	
+	byte valeurMaxEtMin [][] = new byte[2][4];
 		
 	public Ordinateur(String pNom) {
 		super(pNom);
@@ -38,8 +38,39 @@ public class Ordinateur extends Joueur {
 	
 	
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
+		byte [] combinaisonPropose = new byte[4];
+						
+		for(int i = 0; i < 4; i++) {	
+			if(listeDesPropositionDeCombinaison.size() == 0) {
+				valeurMaxEtMin[0][i] = 9;
+				valeurMaxEtMin[1][i] = 0;
+				combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i]) / 2);
+			}else{
+				Combinaison combinaisonPrecedente = listeDesPropositionDeCombinaison.get(listeDesPropositionDeCombinaison.size() - 1);
+				String indicesPrecedent = indices.get(indices.size() - 1);
+				byte chiffreCombinaisonPrecedente = convertirCombinaisonsEnChiffre(combinaisonPrecedente, i);
 			
-		return null;
+				if(indicesPrecedent.charAt(i) == '+') {
+					valeurMaxEtMin[1][i] = chiffreCombinaisonPrecedente;
+					combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] + 1) / 2);
+				}else if(indicesPrecedent.charAt(i) == '-') {
+					valeurMaxEtMin[0][i] =  chiffreCombinaisonPrecedente;
+					combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] - 1) / 2);
+				}else {
+					combinaisonPropose[i] = chiffreCombinaisonPrecedente;
+				}
+			}
+		}
+		Combinaison combinaison = new Combinaison(combinaisonPropose);
+		return combinaison;
+	}
+	
+	
+	public byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
+		byte chiffre;
+		char ancienChiffreChar = combinaison.toString().charAt(i);
+		chiffre  = (byte) Character.getNumericValue(ancienChiffreChar);
+		return chiffre;
 	}
 	
 	//fonction qui demande une proposition de combinaison à l'ordinateur
@@ -104,12 +135,7 @@ public class Ordinateur extends Joueur {
 		return combinaison;
 	}*/
 	
-	public int convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
-		int chiffre;
-		char ancienChiffreChar = combinaison.toString().charAt(i);
-		chiffre  = Character.getNumericValue(ancienChiffreChar);
-		return chiffre;
-	}
+	
 	
 		
 }

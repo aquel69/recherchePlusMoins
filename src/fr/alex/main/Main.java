@@ -8,20 +8,28 @@ public class Main {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		String choixDuMenu;
+		Joueur joueurDefenseur;
+		Joueur joueurAttaquant;
+		Parties partie;
 		
 		presentation();
 		choixDuMenu = sc.nextLine();
 		
 		switch (choixDuMenu) {
 		case "1":
-			Joueur joueurAttaquant = new Humain("attaquant");
-			Joueur joueurDefenseur = new Ordinateur("défenseur");
-			
-			PartieClassique partie = new PartieClassique(joueurAttaquant, joueurDefenseur);
-			
+			joueurDefenseur = new Ordinateur("défenseur");
+			joueurAttaquant = new Humain("attaquant");
+						
+			partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
 			partie.Jouer();
 			break;
-
+		case "2":
+			joueurDefenseur = new Humain("défenseur");
+			joueurAttaquant = new Ordinateur("attaquant");
+			
+			partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
+			partie.Jouer();
+			break;
 		default:
 			break;
 		}
