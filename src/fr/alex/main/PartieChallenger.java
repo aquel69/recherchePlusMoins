@@ -29,8 +29,8 @@ public class PartieChallenger extends Parties {
 	
 	public void affichageJeuEnCours() {
 		 for(int i = 0; i < propositionsCombinaison.size(); i++) {
-			System.out.print("combinaison " + propositionsCombinaison.get(i));
-			System.out.println(" / indices correspondant " + indices.get(i) + "\n");
+			System.out.print("\ncombinaison " + propositionsCombinaison.get(i));
+			System.out.print(" / indices correspondant " + indices.get(i) );
 		 }
 	}
 
@@ -38,8 +38,8 @@ public class PartieChallenger extends Parties {
 		String messageFinal = "";
 			
 			if(nombreIndiceEgale == 4)
-				messageFinal = joueurAttaquant.nom + " tu as gagné en : " + nbDeCoupJoue + " coups !!!";
-			else messageFinal = joueurDefenseur.nom + " tu as gagné!!!";
+				messageFinal = "\n" + joueurAttaquant.nom + " tu as gagné en : " + nbDeCoupJoue + " coups !!!";
+			else messageFinal = "\n" + joueurDefenseur.nom + " tu as gagné!!!";
 				
 		return messageFinal;
 	}

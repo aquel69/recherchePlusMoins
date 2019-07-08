@@ -27,8 +27,8 @@ public class Combinaison {
 				indiceTotal += indice;
 			}
 			
-			if(PartieChallenger.nombreIndiceEgale != 4)
-				PartieChallenger.nombreIndiceEgale = 0;
+			if(Parties.nombreIndiceEgale != 4)
+				Parties.nombreIndiceEgale = 0;
 		
 		return indiceTotal;
 	}

@@ -17,10 +17,10 @@ public class PartieDefenseur extends Parties  {
 		
 		do {
 			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaison, indices);
-			String affichageIndice = combinaisonMystere.Comparer(combinaisonProposee);
 			propositionsCombinaison.add(combinaisonProposee);
-			indices.add(affichageIndice);
 			affichageJeuEnCours();
+			String demandeIndice = joueurDefenseur.DonnerLesIndices();
+			indices.add(demandeIndice);
 			nbDeCoupJoue++;
 		}while(nombreIndiceEgale != 4 && nbDeCoupJoue != 5);
 		
@@ -28,10 +28,9 @@ public class PartieDefenseur extends Parties  {
 	}
 	
 	public void affichageJeuEnCours() {
-		 for(int i = 0; i < propositionsCombinaison.size(); i++) {
-			System.out.print("combinaison " + propositionsCombinaison.get(i));
-			System.out.println(" / indices correspondant " + indices.get(i) + "\n");
-		 }
+		System.out.println("\n----------------------------------------------");
+		System.out.println("------------------- combinaison mystère : " + combinaisonMystere.toString());
+		System.out.println("proposition combinaison de l'ordinateur : " + propositionsCombinaison.get(indices.size()));
 	}
 
 	public String AfficherResultat() {

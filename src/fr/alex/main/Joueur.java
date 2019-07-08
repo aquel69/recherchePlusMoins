@@ -17,4 +17,6 @@ public abstract class Joueur {
 	
 	public abstract Combinaison ProposerCombinaison(List<Combinaison> propositionsCombinaison, List<String> indices);
 	
+	public abstract String DonnerLesIndices();
+	 
 }

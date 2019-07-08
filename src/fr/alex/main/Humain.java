@@ -18,7 +18,7 @@ public class Humain extends Joueur {
 			String combinaisonString;
 			
 			//demande et entrée de la saisie du joueur
-			System.out.println(nom + " veuillez saisir 4 chiffres pour la combinaison mystère : ");
+			System.out.print("\n" + nom + " veuillez saisir 4 chiffres pour la combinaison mystère : ");
 			combinaisonString = sc.nextLine();
 			
 			//conversion et remplissage du tableau byte a partir de la saisie String
@@ -41,8 +41,8 @@ public class Humain extends Joueur {
 			Scanner sc = new Scanner(System.in);
 			byte [] combinaisonByte = new byte[4];
 			String combinaisonString;
-			
-			System.out.println("\n" + nom + " veuillez proposer une combinaison à 4 chiffres : ");
+			System.out.println("\n----------------------------------------------------------");
+			System.out.print( nom + " veuillez proposer une combinaison à 4 chiffres : ");
 			combinaisonString = sc.nextLine();
 			
 			
@@ -58,12 +58,20 @@ public class Humain extends Joueur {
 		}
 
 		public String DonnerLesIndices() {
+			Parties.nombreIndiceEgale = 0;
+			
 			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			String indices;
 			
-			System.out.println("Donner les indices correspondant à la proposition : ");
+			System.out.print("Donner les indices correspondant à la proposition : ");
 			indices = sc.nextLine();
+			
+			//calcul nombre indice '='
+			for(int i = 0; i < indices.length(); i++) {
+				if(indices.charAt(i) == '=')
+				Parties.nombreIndiceEgale++; 
+			}
 			
 			return indices;
 		}

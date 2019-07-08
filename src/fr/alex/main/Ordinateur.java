@@ -39,7 +39,8 @@ public class Ordinateur extends Joueur {
 	
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
 		byte [] combinaisonPropose = new byte[4];
-						
+		
+		
 		for(int i = 0; i < 4; i++) {	
 			if(listeDesPropositionDeCombinaison.size() == 0) {
 				valeurMaxEtMin[0][i] = 9;
@@ -58,6 +59,7 @@ public class Ordinateur extends Joueur {
 					combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] - 1) / 2);
 				}else {
 					combinaisonPropose[i] = chiffreCombinaisonPrecedente;
+					
 				}
 			}
 		}
@@ -65,6 +67,9 @@ public class Ordinateur extends Joueur {
 		return combinaison;
 	}
 	
+	public String DonnerLesIndices() {
+		return null;
+	}
 	
 	public byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
 		byte chiffre;
