@@ -17,9 +17,14 @@ public class Humain extends Joueur {
 			byte [] combinaisonByte = new byte[4];
 			String combinaisonString;
 			
-			//demande et entrée de la saisie du joueur
-			System.out.print("\n" + nom + " veuillez saisir 4 chiffres pour la combinaison mystère : ");
-			combinaisonString = sc.nextLine();
+			//demande et entrÃ©e de la saisie du joueur
+			System.out.print("\n" + nom + " veuillez saisir 4 chiffres pour la combinaison mystÃ¨re : ");
+			
+			do{
+				combinaisonString = sc.nextLine();
+				verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
+				System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+			}while(VerificationSaisie.SiEntrerClavierEstFausse);
 			
 			//conversion et remplissage du tableau byte a partir de la saisie String
 			for(int i = 0; i < combinaisonString.length(); i++) {
@@ -42,9 +47,14 @@ public class Humain extends Joueur {
 			byte [] combinaisonByte = new byte[4];
 			String combinaisonString;
 			System.out.println("\n----------------------------------------------------------");
-			System.out.print( nom + " veuillez proposer une combinaison à 4 chiffres : ");
-			combinaisonString = sc.nextLine();
+			System.out.print( nom + " veuillez proposer une combinaison Ã  4 chiffres : ");
 			
+			
+			do{
+				combinaisonString = sc.nextLine();
+				verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
+				System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+			}while(VerificationSaisie.SiEntrerClavierEstFausse);
 			
 			for(int i = 0; i < combinaisonString.length(); i++) {
 				char [] combinaisonChar = combinaisonString.toCharArray();
@@ -64,8 +74,13 @@ public class Humain extends Joueur {
 			Scanner sc = new Scanner(System.in);
 			String indices;
 			
-			System.out.print("Donner les indices correspondant à la proposition : ");
-			indices = sc.nextLine();
+			System.out.print("Donner les indices correspondant Ã  la proposition : ");
+			
+			do{
+				indices = sc.nextLine();
+				verificationSaisie.erreurDeSaisieIndice(indices);
+				System.out.println(verificationSaisie.erreurDeSaisieIndice(indices));
+			}while(VerificationSaisie.SiEntrerClavierEstFausse);
 			
 			//calcul nombre indice '='
 			for(int i = 0; i < indices.length(); i++) {
@@ -75,6 +90,8 @@ public class Humain extends Joueur {
 			
 			return indices;
 		}
+		
+		
 	
 	
 	

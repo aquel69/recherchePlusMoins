@@ -38,8 +38,8 @@ public class PartieChallenger extends Parties {
 		String messageFinal = "";
 			
 			if(nombreIndiceEgale == 4)
-				messageFinal = "\n" + joueurAttaquant.nom + " tu as gagné en : " + nbDeCoupJoue + " coups !!!";
-			else messageFinal = "\n" + joueurDefenseur.nom + " tu as gagné!!!";
+				messageFinal = "\n" + joueurAttaquant.nom + " tu as gagnÃ© en : " + nbDeCoupJoue + " coups !!!";
+			else messageFinal = "\n" + joueurDefenseur.nom + " tu as gagnÃ©!!!";
 				
 		return messageFinal;
 	}

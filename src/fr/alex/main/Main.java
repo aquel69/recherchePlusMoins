@@ -11,28 +11,52 @@ public class Main {
 		Joueur joueurDefenseur;
 		Joueur joueurAttaquant;
 		Parties partie;
+		String reponse = null;
+		char caracChoixMenu = ' ';
+		VerificationSaisie verificationSaisie = new VerificationSaisie();
 		
-		presentation();
-		choixDuMenu = sc.nextLine();
-		
-		switch (choixDuMenu) {
-		case "1":
-			joueurDefenseur = new Ordinateur("défenseur");
-			joueurAttaquant = new Humain("attaquant");
-						
-			partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
-			partie.Jouer();
-			break;
-		case "2":
-			joueurDefenseur = new Humain("défenseur");
-			joueurAttaquant = new Ordinateur("attaquant");
+		do {
+			presentation();
+			System.out.print("Selectionnez un mode de jeu : ");
 			
-			partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
-			partie.Jouer();
-			break;
-		default:
-			break;
-		}
+			do{
+				choixDuMenu = sc.nextLine();
+				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
+				System.out.println(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
+			}while(VerificationSaisie.SiEntrerClavierEstFausse);
+			switch (choixDuMenu) {
+			case "1":
+				do{
+					
+					joueurDefenseur = new Ordinateur("defenseur");
+				
+					joueurAttaquant = new Humain("attaquant");
+								
+					partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
+					partie.Jouer();
+					
+					do {
+						choixDuMenu = sc.nextLine();
+						caracChoixMenu = choixDuMenu.charAt(0);
+					}while(caracChoixMenu != 'O' && caracChoixMenu != 'N' && caracChoixMenu != 'M');
+					System.out.println("lettre en dehors " + choixDuMenu);
+				}while(caracChoixMenu == 'O');
+				if (caracChoixMenu == 'N' && caracChoixMenu == 'M') 
+				break;
+				
+			case "2":
+				joueurDefenseur = new Humain("defenseur");
+				joueurAttaquant = new Ordinateur("attaquant");
+				
+				partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
+				partie.Jouer();
+				break;
+			default:
+		
+				break;
+			}
+		}while(caracChoixMenu == 'M');
+		
 		
 	}
 	
@@ -45,9 +69,24 @@ public class Main {
 			"1 - Mode Challenger\n" + 
 			"2 - Mode Defenseur\n" +
 			"3 - Mode Duel\n" +
-			"4 - Régles et aides\n" + 
-			"5 - Quitter le jeu\n" +
+			"4 - Quitter le jeu\n" +
 			"---------------------------------------------------");
 		
 	}
+	
+	@SuppressWarnings("resource")
+	public static String reponseMenu() {
+		String pReponse = null;
+		Scanner sc = null;
+		
+		System.out.println("Souhaitez vous refaire une partie ? O pour oui / N pour non");
+		System.out.println("Ou retourner au menu ? M pour menu");
+		
+		pReponse = sc.nextLine();
+		
+		
+		return pReponse;
+	}
+	
+	
 }

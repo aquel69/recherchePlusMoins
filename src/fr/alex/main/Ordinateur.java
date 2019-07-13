@@ -13,7 +13,7 @@ public class Ordinateur extends Joueur {
 		
 	}
 	
-	//fonction qui demande la combinaison mystere à l'ordinateur
+	//fonction qui demande la combinaison mystere ï¿½ l'ordinateur
 	public Combinaison DonnerCombinaisonMystere() {
 		
 		byte [] combinaisonByte = new byte[4];
@@ -22,7 +22,7 @@ public class Ordinateur extends Joueur {
 		byte chiffreByte;
 		
 		
-		System.out.println("l'ordinateur a établi une combinaison mystère");
+		System.out.println("l'ordinateur a Ã©tabli une combinaison mystÃ¨re");
 		for(int i = 0; i < 4; i++) {	
 			chiffreInt = random.nextInt(10);
 			chiffreByte = (byte) chiffreInt;
@@ -53,13 +53,12 @@ public class Ordinateur extends Joueur {
 			
 				if(indicesPrecedent.charAt(i) == '+') {
 					valeurMaxEtMin[1][i] = chiffreCombinaisonPrecedente;
-					combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] + 1) / 2);
+					combinaisonPropose[i] = (byte)Math.ceil(((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] + 1) / 2));
 				}else if(indicesPrecedent.charAt(i) == '-') {
 					valeurMaxEtMin[0][i] =  chiffreCombinaisonPrecedente;
-					combinaisonPropose[i] = (byte) ((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i] - 1) / 2);
+					combinaisonPropose[i] = (byte) Math.round (((valeurMaxEtMin[0][i] + valeurMaxEtMin[1][i]) / 2));
 				}else {
 					combinaisonPropose[i] = chiffreCombinaisonPrecedente;
-					
 				}
 			}
 		}
@@ -78,7 +77,7 @@ public class Ordinateur extends Joueur {
 		return chiffre;
 	}
 	
-	//fonction qui demande une proposition de combinaison à l'ordinateur
+	//fonction qui demande une proposition de combinaison ï¿½ l'ordinateur
 	/**public Combinaison ProposerCombinaison() {
 		
 		byte [] combinaisonByte = new byte[4];

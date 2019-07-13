@@ -3,9 +3,11 @@ package fr.alex.main;
 import java.util.List;
 
 public abstract class Joueur {
-	String nom;
-	Combinaison propositionCombinaison;
-	Combinaison combinaisonMystere;
+	protected String nom;
+	protected Combinaison propositionCombinaison;
+	protected Combinaison combinaisonMystere;
+	protected boolean verificationEntrerClavier = false;
+	VerificationSaisie verificationSaisie = new VerificationSaisie();
 	
 	
 	//constructeur qui a pour parametre le nom du joueur

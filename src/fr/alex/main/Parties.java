@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Parties {
+		
 	Joueur joueurAttaquant;
 	Joueur joueurDefenseur;
 	protected Combinaison combinaisonMystere;
 	
 
 	static int nombreIndiceEgale = 0;
+	
 	protected int nbDeCoupJoue = 0;
 		
 	protected List<Combinaison> propositionsCombinaison;
