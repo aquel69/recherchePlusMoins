@@ -24,7 +24,7 @@ public class Humain extends Joueur {
 				combinaisonString = sc.nextLine();
 				verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
 				System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
-			}while(VerificationSaisie.SiEntrerClavierEstFausse);
+			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			//conversion et remplissage du tableau byte a partir de la saisie String
 			for(int i = 0; i < combinaisonString.length(); i++) {
@@ -54,7 +54,7 @@ public class Humain extends Joueur {
 				combinaisonString = sc.nextLine();
 				verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
 				System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
-			}while(VerificationSaisie.SiEntrerClavierEstFausse);
+			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			for(int i = 0; i < combinaisonString.length(); i++) {
 				char [] combinaisonChar = combinaisonString.toCharArray();
@@ -80,7 +80,7 @@ public class Humain extends Joueur {
 				indices = sc.nextLine();
 				verificationSaisie.erreurDeSaisieIndice(indices);
 				System.out.println(verificationSaisie.erreurDeSaisieIndice(indices));
-			}while(VerificationSaisie.SiEntrerClavierEstFausse);
+			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			//calcul nombre indice '='
 			for(int i = 0; i < indices.length(); i++) {

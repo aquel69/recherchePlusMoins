@@ -14,6 +14,7 @@ public class PartieChallenger extends Parties {
 	
 	public void Jouer() {
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
+		nombreIndiceEgale = 0;
 		
 		do {
 			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaison, indices);

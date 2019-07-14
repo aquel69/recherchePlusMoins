@@ -18,45 +18,81 @@ public class Main {
 		do {
 			presentation();
 			System.out.print("Selectionnez un mode de jeu : ");
-			
 			do{
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
 				System.out.println(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
-			}while(VerificationSaisie.SiEntrerClavierEstFausse);
+			}while(VerificationSaisie.SiEntrerClavierEstVrai);
+			
 			switch (choixDuMenu) {
-			case "1":
-				do{
+				case "1":
+					do{
+						
+						joueurDefenseur = new Ordinateur("defenseur");
 					
-					joueurDefenseur = new Ordinateur("defenseur");
-				
-					joueurAttaquant = new Humain("attaquant");
-								
-					partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
-					partie.Jouer();
+						joueurAttaquant = new Humain("attaquant");
+									
+						partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
+						partie.Jouer();
+						
+						propositionMenuFinDePartie();
+						do {
+							choixDuMenu = sc.nextLine();
+							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
+							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							if(choixDuMenu.isEmpty() == false)
+								caracChoixMenu = choixDuMenu.charAt(0);
+						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
+						
+					}while(caracChoixMenu == 'O');
+					if (caracChoixMenu == 'M' || caracChoixMenu == 'Q') 
+						break;
 					
+				case "2":
 					do {
-						choixDuMenu = sc.nextLine();
-						caracChoixMenu = choixDuMenu.charAt(0);
-					}while(caracChoixMenu != 'O' && caracChoixMenu != 'N' && caracChoixMenu != 'M');
-					System.out.println("lettre en dehors " + choixDuMenu);
-				}while(caracChoixMenu == 'O');
-				if (caracChoixMenu == 'N' && caracChoixMenu == 'M') 
-				break;
-				
-			case "2":
-				joueurDefenseur = new Humain("defenseur");
-				joueurAttaquant = new Ordinateur("attaquant");
-				
-				partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
-				partie.Jouer();
-				break;
-			default:
+						joueurDefenseur = new Humain("defenseur");
+						joueurAttaquant = new Ordinateur("attaquant");
+						
+						partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
+						partie.Jouer();
+										
+						propositionMenuFinDePartie();
+						do {
+							choixDuMenu = sc.nextLine();
+							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
+							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							if(choixDuMenu.isEmpty() == false)
+								caracChoixMenu = choixDuMenu.charAt(0);
+						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
+						
+					}while(caracChoixMenu == 'O');
+					if (caracChoixMenu == 'M' || caracChoixMenu == 'Q') 
+						break;
+					
+				case "3" :
+					do {
+						System.out.println("mode duel");
+						
+						propositionMenuFinDePartie();
+						do {
+							choixDuMenu = sc.nextLine();
+							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
+							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							if(choixDuMenu.isEmpty() == false)
+								caracChoixMenu = choixDuMenu.charAt(0);
+						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
+					}while(caracChoixMenu == 'O');
+					if (caracChoixMenu == 'M' || caracChoixMenu == 'Q') 
+						break;
+					
+				default:
+					break;
+				}
 		
-				break;
-			}
 		}while(caracChoixMenu == 'M');
 		
+		
+		System.out.println("Merci d'avoir joué avec nous!!!");
 		
 	}
 	
@@ -74,19 +110,11 @@ public class Main {
 		
 	}
 	
-	@SuppressWarnings("resource")
-	public static String reponseMenu() {
-		String pReponse = null;
-		Scanner sc = null;
-		
-		System.out.println("Souhaitez vous refaire une partie ? O pour oui / N pour non");
+	
+	public static void propositionMenuFinDePartie() {
+			System.out.println("\nSouhaitez vous refaire une partie ? O pour oui");
 		System.out.println("Ou retourner au menu ? M pour menu");
-		
-		pReponse = sc.nextLine();
-		
-		
-		return pReponse;
+		System.out.println("Ou quitter le jeu ? Q pour Quitter");
 	}
-	
-	
+		
 }
