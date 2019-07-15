@@ -14,11 +14,11 @@ public class Humain extends Joueur {
 		public Combinaison DonnerCombinaisonMystere() {
 			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
-			byte [] combinaisonByte = new byte[4];
+			byte [] combinaisonByte = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 			String combinaisonString;
 			
 			//demande et entrée de la saisie du joueur
-			System.out.print("\n" + nom + " veuillez saisir 4 chiffres pour la combinaison mystère : ");
+			System.out.print("\n" + nom + " veuillez saisir " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON) + " chiffres pour la combinaison mystère : ");
 			
 			do{
 				combinaisonString = sc.nextLine();
@@ -44,16 +44,16 @@ public class Humain extends Joueur {
 			
 			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
-			byte [] combinaisonByte = new byte[4];
+			byte [] combinaisonByte = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 			String combinaisonString;
 			System.out.println("\n----------------------------------------------------------");
-			System.out.print( nom + " veuillez proposer une combinaison à 4 chiffres : ");
+			System.out.print( nom + " veuillez proposer une combinaison à " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON) +" chiffres : ");
 			
 			
 			do{
 				combinaisonString = sc.nextLine();
 				verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
-				System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+				System.out.print(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
 			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			for(int i = 0; i < combinaisonString.length(); i++) {
@@ -79,7 +79,7 @@ public class Humain extends Joueur {
 			do{
 				indices = sc.nextLine();
 				verificationSaisie.erreurDeSaisieIndice(indices);
-				System.out.println(verificationSaisie.erreurDeSaisieIndice(indices));
+				System.out.print(verificationSaisie.erreurDeSaisieIndice(indices));
 			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			//calcul nombre indice '='

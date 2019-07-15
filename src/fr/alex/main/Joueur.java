@@ -3,6 +3,9 @@ package fr.alex.main;
 import java.util.List;
 
 public abstract class Joueur {
+	Proprietes propriete = new Proprietes();
+	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
+	
 	protected String nom;
 	protected Combinaison propositionCombinaison;
 	protected Combinaison combinaisonMystere;

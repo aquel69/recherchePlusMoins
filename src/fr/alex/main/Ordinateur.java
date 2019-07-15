@@ -6,29 +6,28 @@ import java.util.Random;
 public class Ordinateur extends Joueur {
 	
 	Random random = new Random();
-	byte valeurMaxEtMin [][] = new byte[2][4];
+	byte valeurMaxEtMin [][] = new byte[2][Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 		
 	public Ordinateur(String pNom) {
 		super(pNom);
 		
 	}
 	
-	//fonction qui demande la combinaison mystere � l'ordinateur
+	//fonction qui demande la combinaison mystere à l'ordinateur
 	public Combinaison DonnerCombinaisonMystere() {
 		
-		byte [] combinaisonByte = new byte[4];
+		byte [] combinaisonByte = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 		String combinaisonString = "";
 		int chiffreInt = 0;
 		byte chiffreByte;
 		
 		
-		System.out.println("l'ordinateur a établi une combinaison mystère");
-		for(int i = 0; i < 4; i++) {	
+		System.out.println("L'ordinateur a établi une combinaison mystère de " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON) + " chiffres");
+		for(int i = 0; i < Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON); i++) {	
 			chiffreInt = random.nextInt(10);
 			chiffreByte = (byte) chiffreInt;
 			combinaisonByte[i] = chiffreByte;
 			combinaisonString = combinaisonString + String.valueOf(chiffreInt);
-			System.out.println(chiffreByte);
 		}
 		
 		Combinaison combinaison = new Combinaison(combinaisonByte);
@@ -38,10 +37,10 @@ public class Ordinateur extends Joueur {
 	
 	
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
-		byte [] combinaisonPropose = new byte[4];
+		byte [] combinaisonPropose = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 		
 		
-		for(int i = 0; i < 4; i++) {	
+		for(int i = 0; i < Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON); i++) {	
 			if(listeDesPropositionDeCombinaison.size() == 0) {
 				valeurMaxEtMin[0][i] = 9;
 				valeurMaxEtMin[1][i] = 0;

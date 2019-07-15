@@ -2,6 +2,10 @@ package fr.alex.main;
 
 public class Combinaison {
 	
+	Proprietes propriete = new Proprietes();
+	protected final String NB_DE_COUP_MAX = propriete.getNbDeCoupMax();
+	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
+	
 	private byte[] chiffres = new byte[4];
 	
 	
@@ -15,7 +19,7 @@ public class Combinaison {
 		String indice = "";
 		String indiceTotal = "";
 				
-			for(int i = 0; i < 4; i++) {
+			for(int i = 0; i < Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON); i++) {
 				if(this.chiffres[i] == combinaisonAttaquant.chiffres[i]) { 
 					indice = "=";
 					PartieChallenger.nombreIndiceEgale++;
@@ -27,7 +31,7 @@ public class Combinaison {
 				indiceTotal += indice;
 			}
 			
-			if(Parties.nombreIndiceEgale != 4)
+			if(Parties.nombreIndiceEgale != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
 				Parties.nombreIndiceEgale = 0;
 		
 		return indiceTotal;

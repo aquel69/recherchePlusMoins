@@ -22,29 +22,26 @@ public class PartieDefenseur extends Parties  {
 			String demandeIndice = joueurDefenseur.DonnerLesIndices();
 			indices.add(demandeIndice);
 			nbDeCoupJoue++;
-		}while(nombreIndiceEgale != 4 && nbDeCoupJoue != 5);
+		}while(nombreIndiceEgale != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON) && nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
 		
 		System.out.println(AfficherResultat());
 	}
 	
 	public void affichageJeuEnCours() {
 		System.out.println("\n----------------------------------------------");
-		System.out.println("------------------- combinaison mystère : " + combinaisonMystere.toString());
-		System.out.println("proposition combinaison de l'ordinateur : " + propositionsCombinaison.get(indices.size()));
+		System.out.println("------------------- Combinaison mystère : " + combinaisonMystere.toString());
+		System.out.println("Proposition combinaison de l'ordinateur : " + propositionsCombinaison.get(indices.size()));
 	}
 
 	public String AfficherResultat() {
 		String messageFinal = "";
 			
-			if(nombreIndiceEgale == 4)
-				messageFinal = joueurAttaquant.nom + " tu as gagné en : " + nbDeCoupJoue + " coups !!!";
-			else messageFinal = joueurDefenseur.nom + " tu as gagné!!!";
+			if(nombreIndiceEgale == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
+				messageFinal = joueurAttaquant.nom + " Tu as gagné en : " + nbDeCoupJoue + " coups !!!";
+			else messageFinal = joueurDefenseur.nom + " Tu as gagné!!!";
 				
 		return messageFinal;
 	}
 
-	/*public Combinaison getCombinaisonMystere() {
-		return combinaisonMystere;
-	}	*/
 }
 

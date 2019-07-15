@@ -5,32 +5,39 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		
+		VerificationSaisie verificationSaisie = new VerificationSaisie();
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
+		Proprietes propriete = new Proprietes();
+		final String MODE_DEVELOPPEUR = propriete.getModeDeveloppeur();
+				
 		String choixDuMenu;
 		Joueur joueurDefenseur;
 		Joueur joueurAttaquant;
 		Parties partie;
-		String reponse = null;
+		//String reponse = null;
 		char caracChoixMenu = ' ';
-		VerificationSaisie verificationSaisie = new VerificationSaisie();
-		
+				
 		do {
+			
 			presentation();
+			if(Integer.parseInt(MODE_DEVELOPPEUR) == 1)
+				System.out.println("Mode développeur activé\n");
+			else
+				System.out.println("Mode développeur désactivé\n");
 			System.out.print("Selectionnez un mode de jeu : ");
+			
 			do{
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
-				System.out.println(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
+				System.out.print(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
 			}while(VerificationSaisie.SiEntrerClavierEstVrai);
 			
 			switch (choixDuMenu) {
 				case "1":
 					do{
-						
-						joueurDefenseur = new Ordinateur("defenseur");
-					
-						joueurAttaquant = new Humain("attaquant");
+						joueurDefenseur = new Ordinateur("Defenseur");
+						joueurAttaquant = new Humain("Attaquant");
 									
 						partie = new PartieChallenger(joueurDefenseur, joueurAttaquant);
 						partie.Jouer();
@@ -39,7 +46,7 @@ public class Main {
 						do {
 							choixDuMenu = sc.nextLine();
 							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
-							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
 							if(choixDuMenu.isEmpty() == false)
 								caracChoixMenu = choixDuMenu.charAt(0);
 						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -50,8 +57,8 @@ public class Main {
 					
 				case "2":
 					do {
-						joueurDefenseur = new Humain("defenseur");
-						joueurAttaquant = new Ordinateur("attaquant");
+						joueurDefenseur = new Humain("Defenseur");
+						joueurAttaquant = new Ordinateur("Attaquant");
 						
 						partie = new PartieDefenseur(joueurDefenseur, joueurAttaquant);
 						partie.Jouer();
@@ -60,7 +67,7 @@ public class Main {
 						do {
 							choixDuMenu = sc.nextLine();
 							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
-							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
 							if(choixDuMenu.isEmpty() == false)
 								caracChoixMenu = choixDuMenu.charAt(0);
 						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -77,7 +84,7 @@ public class Main {
 						do {
 							choixDuMenu = sc.nextLine();
 							verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
-							System.out.println(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+							System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
 							if(choixDuMenu.isEmpty() == false)
 								caracChoixMenu = choixDuMenu.charAt(0);
 						}while(caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -107,6 +114,8 @@ public class Main {
 			"3 - Mode Duel\n" +
 			"4 - Quitter le jeu\n" +
 			"---------------------------------------------------");
+			
+			
 		
 	}
 	
