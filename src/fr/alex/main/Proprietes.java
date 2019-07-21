@@ -8,51 +8,53 @@ public class Proprietes {
 	private String modeDeveloppeur;
 	private String nbDeCoupMax;
 	private String getNbDeChiffreCombinaison;
-	
+
 	public Proprietes() {
 		try {
 			Properties prop = Proprietes.load("recherchePlusMoins/ressources/config.properties");
+
 			this.modeDeveloppeur = prop.getProperty("recherche.modeDeveloppeur");
 			this.nbDeCoupMax = prop.getProperty("recherche.nbDeCoupMax");
 			this.getNbDeChiffreCombinaison = prop.getProperty("recherche.nbDeChiffreCombinaison");
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-   /**
-    * Charge la liste des propriétés contenu dans le fichier spécifié
-    *
-    * @param filename le fichier contenant les propriétés
-    * @return un objet Properties contenant les propriétés du fichier
-    */
-   public static Properties load(String filename) throws IOException{
-      Properties properties = new Properties();
+	/**
+	 * Charge la liste des propriétés contenu dans le fichier spécifié
+	 * 
+	 * @param filenam
+	 *            le fichier contenant les propriétés
+	 * @return un objet Properties contenant les propriétés du fichier
+	 */
+	public static Properties load(String filename) throws IOException {
+		Properties properties = new Properties();
 
-      FileInputStream input = new FileInputStream(filename); 
-      try{
+		FileInputStream input = new FileInputStream(filename);
+		try {
 
-         properties.load(input);
-         return properties;
+			properties.load(input);
+			return properties;
 
-      }
+		}
 
-              finally{
+		finally {
 
-         input.close();
+			input.close();
 
-      }
-   }
+		}
+	}
 
 	public String getNbDeCoupMax() {
 		return nbDeCoupMax;
 	}
-	
+
 	public String getModeDeveloppeur() {
 		return modeDeveloppeur;
 	}
-	
+
 	public String getNbDeChiffreCombinaison() {
 		return getNbDeChiffreCombinaison;
 	}
