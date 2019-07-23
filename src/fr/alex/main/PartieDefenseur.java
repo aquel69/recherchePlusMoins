@@ -14,7 +14,8 @@ public class PartieDefenseur extends Parties {
 
 	public void Jouer() {
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
-
+		nombreIndiceEgaleOrdinateur = 0;
+		
 		do {
 			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaisonAttaquant,
 					indicesAttaquant);
@@ -23,7 +24,7 @@ public class PartieDefenseur extends Parties {
 			String demandeIndice = joueurDefenseur.DonnerLesIndices();
 			indicesAttaquant.add(demandeIndice);
 			nbDeCoupJoue++;
-		} while (nombreIndiceEgaleHumain != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
+		} while (nombreIndiceEgaleOrdinateur != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
 
 		System.out.println(AfficherResultat());
@@ -39,7 +40,7 @@ public class PartieDefenseur extends Parties {
 	public String AfficherResultat() {
 		String messageFinal = "";
 
-		if (nombreIndiceEgaleHumain == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
+		if (nombreIndiceEgaleOrdinateur == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
 			messageFinal = joueurAttaquant.nom + " Tu as gagné en : " + nbDeCoupJoue + " coups !!!";
 		else
 			messageFinal = joueurDefenseur.nom + " Tu as gagné!!!";

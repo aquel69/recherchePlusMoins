@@ -2,9 +2,17 @@ package fr.alex.main;
 
 import java.util.Scanner;
 
-public class Main {
-	public static void main(String[] args) {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+public class Main {
+	
+	static Logger logger = LogManager.getLogger(Main.class);
+	
+	public static void main(String[] args) {
+		logger.info("le main est lancé");
+			
+		
 		VerificationSaisie verificationSaisie = new VerificationSaisie();
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

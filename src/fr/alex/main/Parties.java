@@ -3,8 +3,12 @@ package fr.alex.main;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Parties {
 
+
+
+public abstract class Parties {
+	
+	
 	Proprietes propriete = new Proprietes();
 	protected final String NB_DE_COUP_MAX = propriete.getNbDeCoupMax();
 	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
