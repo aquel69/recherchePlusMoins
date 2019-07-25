@@ -12,7 +12,7 @@ public class Proprietes {
 	public Proprietes() {
 		try {
 
-			Properties prop = Proprietes.load("recherchePlusMoins/ressources/config.properties");
+			Properties prop = Proprietes.load("ressources/config.properties");
 
 			this.modeDeveloppeur = prop.getProperty("recherche.modeDeveloppeur");
 			this.nbDeCoupMax = prop.getProperty("recherche.nbDeCoupMax");

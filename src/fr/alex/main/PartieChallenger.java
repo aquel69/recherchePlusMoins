@@ -13,14 +13,18 @@ public class PartieChallenger extends Parties {
 	}
 
 	public void Jouer() {
+		aLOrdinateurDeJouer();
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
 		if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
 			System.out.println("La combinaison mystère est : " + combinaisonMystere);
 		nombreIndiceEgaleHumain = 0;
-
+		
+		
 		do {
-			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaisonAttaquant,
-					indicesAttaquant);
+			if(nbDeCoupJoue == 0) {
+				auJoueurDeJouer();
+			}
+			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaisonAttaquant,	indicesAttaquant);
 			String affichageIndice = combinaisonMystere.Comparer(combinaisonProposee);
 			propositionsCombinaisonAttaquant.add(combinaisonProposee);
 			indicesAttaquant.add(affichageIndice);
@@ -29,7 +33,7 @@ public class PartieChallenger extends Parties {
 		} while (nombreIndiceEgaleHumain != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
 
-		System.out.println(AfficherResultat());
+		System.out.println(afficherResultat());
 	}
 
 	public void affichageJeuEnCours() {
@@ -37,17 +41,26 @@ public class PartieChallenger extends Parties {
 			System.out.print("\nCombinaison " + propositionsCombinaisonAttaquant.get(i));
 			System.out.print(" / Indices correspondant " + indicesAttaquant.get(i));
 		}
+		System.out.println("\n\n---------------------------------------------------\n");
 	}
 
-	public String AfficherResultat() {
+	public String afficherResultat() {
 		String messageFinal = "";
 
 		if (nombreIndiceEgaleHumain == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
-			messageFinal = "\n" + joueurAttaquant.nom + " Tu as gagné en : " + nbDeCoupJoue + " coups !!!";
+			messageFinal = "\n" + joueurAttaquant.nom + " vous avez gagné en : " + nbDeCoupJoue + " coups !!!\n";
 		else
-			messageFinal = "\n" + joueurDefenseur.nom + " Tu as gagné!!!";
+			messageFinal = "\n" + joueurAttaquant.nom + " vous avez perdu la solution était : " + combinaisonMystere +"\n";
 
 		return messageFinal;
 	}
-
+	
+	public void auJoueurDeJouer() {
+		System.out.println("\n-------------------A VOUS DE JOUER-----------------\n");
+	}
+	
+	public void aLOrdinateurDeJouer() {
+		System.out.println("\n---------------A L'ORDINATEUR DE JOUER-------------\n");
+	}
+	
 }

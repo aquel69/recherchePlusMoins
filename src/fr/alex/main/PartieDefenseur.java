@@ -27,7 +27,7 @@ public class PartieDefenseur extends Parties {
 		} while (nombreIndiceEgaleOrdinateur != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
 
-		System.out.println(AfficherResultat());
+		System.out.println(afficherResultat());
 	}
 
 	public void affichageJeuEnCours() {
@@ -37,7 +37,7 @@ public class PartieDefenseur extends Parties {
 		System.out.println("------------------- Combinaison mystère : " + combinaisonMystere.toString());
 	}
 
-	public String AfficherResultat() {
+	public String afficherResultat() {
 		String messageFinal = "";
 
 		if (nombreIndiceEgaleOrdinateur == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))

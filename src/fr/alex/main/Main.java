@@ -26,23 +26,28 @@ public class Main {
 		char caracChoixMenu = ' ';
 
 		do {
-
+						
+			
+					
 			presentation();
-
 			if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
-				System.out.println("Mode développeur activé\n");
+				System.out.println("--------------Mode développeur activé--------------");
 			else
-				System.out.println("Mode développeur désactivé\n");
+				System.out.println("-------------Mode développeur désactivé------------");
+				System.out.println("---------------------------------------------------\n");
 			System.out.print("Selectionnez un mode de jeu : ");
-
+			
 			do {
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
 				System.out.print(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
 			} while (VerificationSaisie.SiEntrerClavierEstVrai);
-
+						
 			switch (choixDuMenu) {
 			case "1":
+				
+				Main.presentationModeChallenger(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				
 				do {
 					joueurDefenseur = new Ordinateur("Defenseur");
 					joueurAttaquant = new Humain("Attaquant");
@@ -64,6 +69,9 @@ public class Main {
 					break;
 
 			case "2":
+				
+				Main.presentationModeDefenseur(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				
 				do {
 					joueurDefenseur = new Humain("Defenseur");
 					joueurAttaquant = new Ordinateur("Attaquant");
@@ -85,6 +93,9 @@ public class Main {
 					break;
 
 			case "3":
+				
+				Main.presentationModeDuel(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				
 				do {
 					joueurDefenseur = new Ordinateur("Ordinateur");
 					joueurAttaquant = new Humain("Humain");
@@ -122,6 +133,34 @@ public class Main {
 				+ "2 - Mode Defenseur\n" + "3 - Mode Duel\n" + "4 - Quitter le jeu\n"
 				+ "---------------------------------------------------");
 
+	}
+	
+	public static void presentationModeChallenger(String nbDeCoup, String nbChiffreCombinaison) {
+		System.out.println("\n---------------------------------------------------");
+		System.out.println("------------------MODE CHALLENGER------------------");
+		System.out.println("---------------------------------------------------");
+		System.out.println("trouver la combinaison à " + nbChiffreCombinaison + " chiffres en " + nbDeCoup + " coups max");
+		System.out.println("---------------------------------------------------\n");
+	}
+	
+	public static void presentationModeDefenseur(String nbDeCoup, String nbChiffreCombinaison) {
+		System.out.println("\n---------------------------------------------------");
+		System.out.println("-------------------MODE DEFENSEUR------------------");
+		System.out.println("---------------------------------------------------");
+		System.out.println("----donner une combinaison mystère à " + nbChiffreCombinaison + " chiffres----");
+		System.out.println("--l'ordinateur dispose de " + nbDeCoup + " coups pour la trouver--");
+		System.out.println("---------------------------------------------------\n");
+	}
+	
+	public static void presentationModeDuel(String nbDeCoup, String nbChiffreCombinaison) {
+		System.out.println("\n---------------------------------------------------");
+		System.out.println("---------------------MODE DUEL---------------------");
+		System.out.println("---------------------------------------------------");
+		System.out.println("----------------ORDINATEUR VS VOUS-----------------");
+		System.out.println("---------------------------------------------------");
+		System.out.println("-soyez le premier à trouver la combinaison mystère-");
+		System.out.println("-------------à " + nbChiffreCombinaison + " chiffres en " + nbDeCoup + " coups max-----------");
+		System.out.println("---------------------------------------------------\n\n");
 	}
 
 	public static void propositionMenuFinDePartie() {

@@ -43,6 +43,6 @@ public abstract class Parties {
 
 	public abstract void affichageJeuEnCours();
 
-	public abstract String AfficherResultat();
+	public abstract String afficherResultat();
 
 }

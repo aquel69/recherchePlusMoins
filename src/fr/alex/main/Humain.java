@@ -47,9 +47,9 @@ public class Humain extends Joueur {
 		Scanner sc = new Scanner(System.in);
 		byte[] combinaisonByte = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 		String combinaisonString;
-		System.out.println("\n----------------------------------------------------------");
-		System.out.print(nom + " veuillez proposer une combinaison à " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
-				+ " chiffres afin de trouver la combinaison mystère : ");
+		//System.out.println("\n----------------------------------------------------------");
+		System.out.print("Veuillez proposer une combinaison à " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
+				+ " chiffres\nafin de trouver la combinaison mystère : ");
 
 		do {
 			combinaisonString = sc.nextLine();

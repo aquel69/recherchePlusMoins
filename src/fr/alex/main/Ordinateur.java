@@ -21,7 +21,7 @@ public class Ordinateur extends Joueur {
 		int chiffreInt = 0;
 		byte chiffreByte;
 
-		System.out.println("L'ordinateur a établi une combinaison mystère de "
+		System.out.println("Il a établi une combinaison mystère de "
 				+ Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON) + " chiffres");
 		for (int i = 0; i < Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON); i++) {
 			chiffreInt = random.nextInt(10);

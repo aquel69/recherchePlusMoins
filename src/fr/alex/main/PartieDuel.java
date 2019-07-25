@@ -2,8 +2,18 @@ package fr.alex.main;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author alex
+ *
+ */
 public class PartieDuel extends Parties {
-
+	
+	/**
+	 * 
+	 * @param jDefenseur 
+	 * @param jAttaquant
+	 */
 	public PartieDuel(Joueur jDefenseur, Joueur jAttaquant) {
 		super(jDefenseur, jAttaquant);
 		joueurAttaquant = jAttaquant;
@@ -13,7 +23,10 @@ public class PartieDuel extends Parties {
 		indicesAttaquant = new ArrayList<String>();
 		indicesDefenseur = new ArrayList<String>();
 	}
-
+	
+	/**
+	 * 
+	 */
 	public void Jouer() {
 		combinaisonMystereAttaquant = joueurAttaquant.DonnerCombinaisonMystere();
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
@@ -48,7 +61,7 @@ public class PartieDuel extends Parties {
 				&& nombreIndiceEgaleOrdinateur != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
 
-		System.out.println(AfficherResultat());
+		System.out.println(afficherResultat());
 	}
 
 	public void affichageJeuEnCoursIndice() {
@@ -73,8 +86,12 @@ public class PartieDuel extends Parties {
 				System.out.println(" / Indices correspondant " + indicesAttaquant.get(i));
 		}
 	}
-
-	public String AfficherResultat() {
+	
+	/**
+	 * 
+	 * @return  
+	 */
+	public String afficherResultat() {
 		String messageFinal = "";
 		System.out.println("\n----------------------------------------------");
 		if (nombreIndiceEgaleHumain == nombreIndiceEgaleOrdinateur)
