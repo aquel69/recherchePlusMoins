@@ -18,8 +18,8 @@ public class Humain extends Joueur {
 		String combinaisonString;
 
 		// demande et entrée de la saisie du joueur
-		System.out.print("\n" + nom + " veuillez saisir " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
-				+ " chiffres afin de donner la combinaison mystère : ");
+		System.out.print("Veuillez saisir les " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
+				+ " chiffres\nde la combinaison mystère : ");
 
 		do {
 			combinaisonString = sc.nextLine();

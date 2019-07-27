@@ -3,9 +3,12 @@ package fr.alex.main;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
+/**
+ * class mère partie permettant la mise en place et le déroulement des différentes parties
+ * 
+ * @author alex
+ *
+ */
 public abstract class Parties {
 	
 	
@@ -28,7 +31,15 @@ public abstract class Parties {
 	protected List<Combinaison> propositionsCombinaisonDefenseur;
 	protected List<String> indicesAttaquant;
 	protected List<String> indicesDefenseur;
-
+	
+	/**
+	 * constructeur des parties contenant en paramètre les deux joueurs de Type Joueur.
+	 * Les Lists contiennent les propositions jouées par les Joueurs
+	 * ainsi que les indices donnant les indications pour trouver la solution
+	 * 
+	 * @param jDefenseur joueur défenseur qui donne la combinaison mystère
+	 * @param jAttaquant joueur attaquant qui doit trouver la combinaison mystère
+	 */
 	public Parties(Joueur jDefenseur, Joueur jAttaquant) {
 		joueurAttaquant = jAttaquant;
 		joueurDefenseur = jDefenseur;

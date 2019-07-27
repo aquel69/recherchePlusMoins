@@ -5,6 +5,12 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * class main déroulement du jeu
+ * 
+ * @author alex
+ *
+ */
 public class Main {
 	
 	static Logger logger = LogManager.getLogger(Main.class);
@@ -26,9 +32,6 @@ public class Main {
 		char caracChoixMenu = ' ';
 
 		do {
-						
-			
-					
 			presentation();
 			if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
 				System.out.println("--------------Mode développeur activé--------------");
@@ -125,6 +128,9 @@ public class Main {
 
 	}
 
+	/**
+	 * affichage du menu général
+	 */
 	public static void presentation() {
 
 		System.out.println("---------------------------------------------------\n"
@@ -135,6 +141,9 @@ public class Main {
 
 	}
 	
+	/**
+	 * affichage du menu "challenger"
+	 */
 	public static void presentationModeChallenger(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
 		System.out.println("------------------MODE CHALLENGER------------------");
@@ -143,6 +152,9 @@ public class Main {
 		System.out.println("---------------------------------------------------\n");
 	}
 	
+	/**
+	 * affichage du menu "defenseur"
+	 */
 	public static void presentationModeDefenseur(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
 		System.out.println("-------------------MODE DEFENSEUR------------------");
@@ -152,6 +164,9 @@ public class Main {
 		System.out.println("---------------------------------------------------\n");
 	}
 	
+	/**
+	 * affichage du menu "Duel"
+	 */
 	public static void presentationModeDuel(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
 		System.out.println("---------------------MODE DUEL---------------------");
@@ -163,8 +178,11 @@ public class Main {
 		System.out.println("---------------------------------------------------\n\n");
 	}
 
+	/**
+	 * affichage du menu de la fin de la partie
+	 */
 	public static void propositionMenuFinDePartie() {
-		System.out.println("\nSouhaitez vous refaire une partie ? O pour oui");
+		System.out.println("\nSouhaitez vous relancer une partie ? O pour oui");
 		System.out.println("Ou retourner au menu ? M pour menu");
 		System.out.println("Ou quitter le jeu ? Q pour Quitter");
 	}

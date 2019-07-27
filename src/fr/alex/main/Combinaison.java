@@ -1,14 +1,18 @@
 package fr.alex.main;
 
 public class Combinaison {
-
+	
 	Proprietes propriete;
 	private final String NB_DE_CHIFFRE_COMBINAISON;
 
-	private byte[] chiffres = new byte[4];
+	private byte[] chiffres = null;
 
+	/**
+	 * constructeur de la classe Combinaison 
+	 * 
+	 * @param chiffres
+	 */
 	public Combinaison(byte[] chiffres) {
-		super();
 		this.chiffres = chiffres;
 		propriete = new Proprietes();
 		NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();

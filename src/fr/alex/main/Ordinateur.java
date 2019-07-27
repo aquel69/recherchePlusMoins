@@ -38,8 +38,6 @@ public class Ordinateur extends Joueur {
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
 		byte[] combinaisonPropose = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 
-		System.out.println("\nL'ordinateur propose une combinaison afin de trouver votre combinaison mystère");
-
 		for (int i = 0; i < Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON); i++) {
 			if (listeDesPropositionDeCombinaison.size() == 0) {
 				valeurMaxEtMin[0][i] = 9;
