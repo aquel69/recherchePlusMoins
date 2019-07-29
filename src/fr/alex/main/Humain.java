@@ -3,14 +3,30 @@ package fr.alex.main;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * La classe Humain permet de créér un joueur de type humain
+ * @author alex
+ *
+ */
 public class Humain extends Joueur {
-
+	
+	/**
+	 * constructeur permettant de créér un joueur humain 
+	 * @param pNom de type String permet de donner un nom au joueur humain
+	 */
 	public Humain(String pNom) {
 		super(pNom);
 
 	}
 
-	// fonction qui demande la combinaison mystere au joueur
+	/**
+	 * 
+	 * fonction qui demande au joueur humain d'entrer la combinaison mystere dans une variable String
+	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison
+	 * 
+	 * @return la Combinaison mystere
+	 *
+	 */
 	public Combinaison DonnerCombinaisonMystere() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -20,7 +36,7 @@ public class Humain extends Joueur {
 		// demande et entrée de la saisie du joueur
 		System.out.print("Veuillez saisir les " + Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				+ " chiffres\nde la combinaison mystère : ");
-
+		
 		do {
 			combinaisonString = sc.nextLine();
 			verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
@@ -39,8 +55,13 @@ public class Humain extends Joueur {
 		return combinaison;
 	}
 
-	// fonction qui demande une proposition de combinaison au joueur et conversion
-	// en tableau byte
+	/**
+	 * 
+	 * fonction qui demande au joueur humain d'entrer une proposition de combinaison dans une variable String
+	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison
+	 *  
+	 * @return la proposition combinaison du joueur humain
+	 */
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
 
 		@SuppressWarnings("resource")
@@ -67,7 +88,12 @@ public class Humain extends Joueur {
 
 		return combinaison;
 	}
-
+	
+	/**
+	 * la fonction permet de demander au joueur humain les indices correspondant à la proposition du joueur ordinateur
+	 * 
+	 * @return une variable de type String contenant les indices 
+	 */
 	public String DonnerLesIndices() {
 		Parties.nombreIndiceEgaleOrdinateur = 0;
 
@@ -90,6 +116,12 @@ public class Humain extends Joueur {
 		}
 
 		return indices;
+	}
+
+	@Override
+	public byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int emplacementDansLeTableau) {
+		
+		return 0;
 	}
 
 }

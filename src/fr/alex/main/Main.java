@@ -30,13 +30,15 @@ public class Main {
 		Joueur joueurAttaquant;
 		Parties partie;
 		char caracChoixMenu = ' ';
-
+		
+		// boucle principale du déroulement du jeu
 		do {
 			presentation();
 			if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
-				System.out.println("--------------Mode développeur activé--------------");
+				System.out.println("--------------Mode développeur activé--------------\n"
+						+ "-nbre coup max : "+ propriete.getNbDeCoupMax() + " / nbre chiffre combinaison : " + propriete.getNbDeChiffreCombinaison() +"-");
 			else
-				System.out.println("-------------Mode développeur désactivé------------");
+				System.out.println("---------------------------------------------------");
 				System.out.println("---------------------------------------------------\n");
 			System.out.print("Selectionnez un mode de jeu : ");
 			

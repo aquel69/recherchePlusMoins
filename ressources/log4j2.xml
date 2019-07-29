@@ -4,7 +4,7 @@
 <!--        <Console name="Console" target="SYSTEM_OUT">-->
 <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [Garage v2.0] %-5level %logger{36} - %msg%n"/>-->
 <!--        </Console>-->
-        <File name="File" fileName="logs/Mylogs2.log" bufferedIO="true" advertise="true">
+        <File name="File" fileName="logs/Mylogs.log" bufferedIO="true" advertise="true">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [RecherchePlusMoins] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>

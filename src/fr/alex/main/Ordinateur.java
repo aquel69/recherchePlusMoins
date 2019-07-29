@@ -3,6 +3,11 @@ package fr.alex.main;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * La classe Ordinateur permet de créér un joueur de type ordinateur
+ * @author alex
+ *
+ */
 public class Ordinateur extends Joueur {
 
 	Random random = new Random();
@@ -10,10 +15,14 @@ public class Ordinateur extends Joueur {
 
 	public Ordinateur(String pNom) {
 		super(pNom);
-
 	}
-
-	// fonction qui demande la combinaison mystere à l'ordinateur
+	
+	/**
+	 * 
+	 * fonction permettant de générer aléatoirement une combinaison mystère
+	 * 
+	 * @return Combinaison mystère du joueur Ordinateur	
+	 */
 	public Combinaison DonnerCombinaisonMystere() {
 
 		byte[] combinaisonByte = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
@@ -34,7 +43,15 @@ public class Ordinateur extends Joueur {
 		return combinaison;
 
 	}
-
+	
+	/**
+	 * 
+	 * fonction permettant que l'ordinateur propose une combinaison en fonction des indices. 
+	 * La méthode dichotomique est utilisée pour l'algorithme
+	 * addition de la valeur mini et maxi divisé par deux
+	 * 
+	 * @return Combinaison proposée par l'Ordinateur en fonction des indices donnés par le joueur humain
+	 */
 	public Combinaison ProposerCombinaison(List<Combinaison> listeDesPropositionDeCombinaison, List<String> indices) {
 		byte[] combinaisonPropose = new byte[Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)];
 
@@ -64,10 +81,12 @@ public class Ordinateur extends Joueur {
 		return combinaison;
 	}
 
-	public String DonnerLesIndices() {
-		return null;
-	}
-
+	/**
+	 * cette fonction permet à partir d'une combinaison de convertir le chiffre désiré en byte
+	 * @param combinaison
+	 * @param i
+	 * @return une variable de type byte 
+	 */
 	public byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
 		byte chiffre;
 		char ancienChiffreChar = combinaison.toString().charAt(i);
@@ -75,61 +94,10 @@ public class Ordinateur extends Joueur {
 		return chiffre;
 	}
 
-	// fonction qui demande une proposition de combinaison � l'ordinateur
-	/**
-	 * public Combinaison ProposerCombinaison() {
-	 * 
-	 * byte [] combinaisonByte = new byte[4]; //byte [] combMyst = new byte[4];
-	 * 
-	 * String combinaisonString = ""; int chiffreInt = 0; byte chiffreByte;
-	 * 
-	 * for(int i = 0; i < 4; i++) { if(PartieClassique.nbDeCoupJoue == 0) chiffreInt
-	 * = 5;
-	 * 
-	 * else if(PartieClassique.nbDeCoupJoue >= 1){ Combinaison ancienneCombinaison =
-	 * PartieClassique.propositionsCombinaison.get(PartieClassique.nbDeCoupJoue -
-	 * 1); boolean chiffreIdentique = false; int chiffreAncienneCombinaisonPropose =
-	 * convertirCombinaisonsEnChiffre(ancienneCombinaison, i); int
-	 * chiffreCombinaisonMystere =
-	 * convertirCombinaisonsEnChiffre(PartieClassique.combinaisonMystere, i);
-	 * 
-	 * if (PartieClassique.nbDeCoupJoue == 1) { if(chiffreCombinaisonMystere == 5)
-	 * chiffreInt = 5; else if(chiffreCombinaisonMystere < 5) chiffreInt = 3; else
-	 * chiffreInt = 7; }else if(chiffreAncienneCombinaisonPropose ==
-	 * chiffreCombinaisonMystere) chiffreInt = chiffreAncienneCombinaisonPropose;
-	 * else do {
-	 * 
-	 * chiffreIdentique = false; if (chiffreCombinaisonMystere > 5 &&
-	 * chiffreAncienneCombinaisonPropose < chiffreCombinaisonMystere) chiffreInt =
-	 * random.nextInt(9 - chiffreAncienneCombinaisonPropose + 1) +
-	 * chiffreAncienneCombinaisonPropose; else if (chiffreCombinaisonMystere > 5 &&
-	 * chiffreAncienneCombinaisonPropose > chiffreCombinaisonMystere) chiffreInt =
-	 * random.nextInt(chiffreAncienneCombinaisonPropose - 6 + 1) + 6; else if
-	 * (chiffreCombinaisonMystere < 5 && chiffreAncienneCombinaisonPropose <
-	 * chiffreCombinaisonMystere) chiffreInt = random.nextInt(4 -
-	 * chiffreAncienneCombinaisonPropose + 1) + chiffreAncienneCombinaisonPropose;
-	 * else if (chiffreCombinaisonMystere < 5 && chiffreAncienneCombinaisonPropose >
-	 * chiffreCombinaisonMystere) chiffreInt =
-	 * random.nextInt(chiffreAncienneCombinaisonPropose);
-	 * 
-	 * for(int k = 0; k < PartieClassique.propositionsCombinaison.size(); k++) {
-	 * Combinaison anciennesCombinaison =
-	 * PartieClassique.propositionsCombinaison.get(k); int
-	 * chiffreAncienneCombinaisonProposeListeEntiere =
-	 * convertirCombinaisonsEnChiffre(anciennesCombinaison, i);
-	 * 
-	 * if(chiffreAncienneCombinaisonProposeListeEntiere == chiffreInt)
-	 * chiffreIdentique = true; }
-	 * 
-	 * }while(chiffreIdentique);
-	 * 
-	 * } chiffreByte = (byte) chiffreInt; combinaisonByte[i] = chiffreByte;
-	 * combinaisonString = combinaisonString + String.valueOf(chiffreInt);
-	 * System.out.println(chiffreByte); } System.out.println("l'ordinateur propose
-	 * la combinaison : " + combinaisonString);
-	 * 
-	 * Combinaison combinaison = new Combinaison(combinaisonByte); return
-	 * combinaison; }
-	 */
-
+	@Override
+	public String DonnerLesIndices() {
+		
+		return null;
+	}
+	
 }

@@ -9,15 +9,22 @@ public class Combinaison {
 
 	/**
 	 * constructeur de la classe Combinaison 
+	 * permet de creer les objets combinaison
 	 * 
-	 * @param chiffres
+	 * @param chiffres tableau de byte contenant dans chaque emplacement un chiffre de la combinaison
+	 * la longueur du tableau dépend du nombre de chiffre entrer dans le fichier config.properties
 	 */
 	public Combinaison(byte[] chiffres) {
 		this.chiffres = chiffres;
 		propriete = new Proprietes();
 		NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
 	}
-
+	
+	/**
+	 * la fonction permet de connaitre les indices correspondant à la proposition
+	 * @param combinaisonAttaquant de type Combinaison la combinaison du joueur qui attaque pour connaitre les indices correspondant 
+	 * @return la variable de type String contenant les indices
+	 */
 	public String Comparer(Combinaison combinaisonAttaquant) {
 		String indice = "";
 		String indiceTotal = "";
@@ -40,7 +47,11 @@ public class Combinaison {
 
 		return indiceTotal;
 	}
-
+	
+	/**
+	 * la fonction convertit le tableau byte en un String
+	 * @return la variable de type String contenant la combinaison
+	 */
 	public String toString() {
 		String chiffreString = "";
 

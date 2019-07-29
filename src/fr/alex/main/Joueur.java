@@ -2,6 +2,11 @@ package fr.alex.main;
 
 import java.util.List;
 
+/**
+ * la class Joueur est la classe mère permettant de définir les joueurs du jeu
+ * @author alex
+ *
+ */
 public abstract class Joueur {
 	Proprietes propriete = new Proprietes();
 	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
@@ -13,6 +18,10 @@ public abstract class Joueur {
 	VerificationSaisie verificationSaisie = new VerificationSaisie();
 
 	// constructeur qui a pour parametre le nom du joueur
+	/**
+	 * constructeur permettant de créér un joueur en lui donnant un nom
+	 * @param pNom de type String permet de donner un nom au Joueur
+	 */
 	public Joueur(String pNom) {
 		nom = pNom;
 	}
@@ -22,5 +31,7 @@ public abstract class Joueur {
 	public abstract Combinaison ProposerCombinaison(List<Combinaison> propositionsCombinaison, List<String> indices);
 
 	public abstract String DonnerLesIndices();
+	
+	public abstract byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int emplacementDansLeTableau);
 
 }

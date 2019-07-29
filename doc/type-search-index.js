@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"fr.alex.main","l":"Combinaison"},{"p":"fr.alex.main","l":"Humain"},{"p":"fr.alex.main","l":"Joueur"},{"p":"fr.alex.main","l":"Main"},{"p":"fr.alex.main","l":"Ordinateur"},{"p":"fr.alex.main","l":"PartieChallenger"},{"p":"fr.alex.main","l":"PartieDefenseur"},{"p":"fr.alex.main","l":"PartieDuel"},{"p":"fr.alex.main","l":"Parties"},{"p":"fr.alex.main","l":"Proprietes"},{"p":"fr.alex.main","l":"VerificationSaisie"}]
+typeSearchIndex = [{"p":"fr.alex.main","l":"Main"}]
