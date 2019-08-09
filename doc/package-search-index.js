@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"fr.alex.main"}]
+packageSearchIndex = [{"l":"fr.alex.escapegame"},{"l":"jeu"},{"l":"utils"}]
