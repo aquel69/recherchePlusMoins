@@ -12,12 +12,10 @@ import utils.Proprietes;
  *
  */
 public abstract class Parties {
-	
-	
-	Proprietes propriete = new Proprietes();
-	protected final String NB_DE_COUP_MAX = propriete.getNbDeCoupMax();
-	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
-	protected final String MODE_DEVELOPPEUR = propriete.getModeDeveloppeur();
+		
+	protected final String NB_DE_COUP_MAX = Proprietes.getInstance().getNbDeCoupMax();
+	protected final String NB_DE_CHIFFRE_COMBINAISON = Proprietes.getInstance().getNbDeChiffreCombinaison();
+	protected final String MODE_DEVELOPPEUR = Proprietes.getInstance().getModeDeveloppeur();
 
 	protected Joueur joueurAttaquant;
 	protected Joueur joueurDefenseur;

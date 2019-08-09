@@ -3,6 +3,10 @@ package jeu;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import fr.alex.escapegame.EscapeGame;
 import utils.VerificationSaisie;
 
 /**
@@ -11,14 +15,13 @@ import utils.VerificationSaisie;
  *
  */
 public class Humain extends Joueur {
-	
+	static Logger logger = LogManager.getLogger(EscapeGame.class);
 	/**
 	 * constructeur permettant de créér un joueur humain 
 	 * @param pNom de type String permet de donner un nom au joueur humain
 	 */
 	public Humain(String pNom) {
 		super(pNom);
-
 	}
 
 	/**
@@ -42,7 +45,9 @@ public class Humain extends Joueur {
 		do {
 			combinaisonString = sc.nextLine();
 			verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
-			System.out.println(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+			System.out.print(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+			if(VerificationSaisie.SiEntrerClavierEstVrai)
+				logger.info("erreur saisie de la combinaison, le joueur a rentré : " + combinaisonString);
 		} while (VerificationSaisie.SiEntrerClavierEstVrai);
 
 		// conversion et remplissage du tableau byte a partir de la saisie String
@@ -50,10 +55,9 @@ public class Humain extends Joueur {
 			char[] combinaisonChar = combinaisonString.toCharArray();
 			int a = Character.getNumericValue(combinaisonChar[i]);
 			combinaisonByte[i] = (byte) a;
-
 		}
-
 		Combinaison combinaison = new Combinaison(combinaisonByte);
+		
 		return combinaison;
 	}
 
@@ -78,6 +82,8 @@ public class Humain extends Joueur {
 			combinaisonString = sc.nextLine();
 			verificationSaisie.erreurDeSaisieCombinaison(combinaisonString);
 			System.out.print(verificationSaisie.erreurDeSaisieCombinaison(combinaisonString));
+			if(VerificationSaisie.SiEntrerClavierEstVrai)
+				logger.info("erreur saisie de la combinaison, le joueur a rentré : " + combinaisonString);
 		} while (VerificationSaisie.SiEntrerClavierEstVrai);
 
 		for (int i = 0; i < combinaisonString.length(); i++) {
@@ -85,7 +91,6 @@ public class Humain extends Joueur {
 			int a = Character.getNumericValue(combinaisonChar[i]);
 			combinaisonByte[i] = (byte) a;
 		}
-
 		Combinaison combinaison = new Combinaison(combinaisonByte);
 
 		return combinaison;
@@ -103,12 +108,14 @@ public class Humain extends Joueur {
 		Scanner sc = new Scanner(System.in);
 		String indices;
 
-		System.out.print("Donner les indices correspondant à la proposition : ");
+		System.out.print("Donner les indices de la proposition : ");
 
 		do {
 			indices = sc.nextLine();
 			verificationSaisie.erreurDeSaisieIndice(indices);
 			System.out.print(verificationSaisie.erreurDeSaisieIndice(indices));
+			if(VerificationSaisie.SiEntrerClavierEstVrai)
+				logger.info("erreur saisie des indices, le joueur a rentré : " + indices);
 		} while (VerificationSaisie.SiEntrerClavierEstVrai);
 
 		// calcul nombre indice '='

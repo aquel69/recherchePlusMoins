@@ -52,7 +52,6 @@ public class PartieChallenger extends Parties {
 			nbDeCoupJoue++;
 		} while (nombreIndiceEgaleHumain != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
-
 		
 		System.out.println(afficherResultat());
 	}

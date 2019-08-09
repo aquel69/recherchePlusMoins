@@ -18,8 +18,7 @@ public class Combinaison {
 	 */
 	public Combinaison(byte[] chiffres) {
 		this.chiffres = chiffres;
-		propriete = new Proprietes();
-		NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
+		NB_DE_CHIFFRE_COMBINAISON = Proprietes.getInstance().getNbDeChiffreCombinaison();
 	}
 	
 	/**

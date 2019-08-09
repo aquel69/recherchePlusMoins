@@ -23,18 +23,17 @@ import utils.VerificationSaisie;
  */
 public class EscapeGame {
 	
-	static Logger logger = LogManager.getLogger(EscapeGame.class);
+	//static Logger logger = LogManager.getLogger(EscapeGame.class);
 	
 	public static void main(String[] args) {
-		logger.info("le main est lancé");
-			
+		Logger logger = LogManager.getLogger(EscapeGame.class);
 		
+		logger.info("le main est lancé");
+				
 		VerificationSaisie verificationSaisie = new VerificationSaisie();
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-		Proprietes propriete = new Proprietes();
-		final String MODE_DEVELOPPEUR = propriete.getModeDeveloppeur();
-
+		
 		String choixDuMenu;
 		Joueur joueurDefenseur;
 		Joueur joueurAttaquant;
@@ -44,10 +43,12 @@ public class EscapeGame {
 		// boucle principale du déroulement du jeu
 		do {
 			presentation();
-			if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
+			if (Integer.parseInt(Proprietes.getInstance().getModeDeveloppeur()) == 1) {
+				
 				System.out.println("--------------Mode développeur activé--------------\n"
-						+ "-nbre coup max : "+ propriete.getNbDeCoupMax() + " / nbre chiffre combinaison : " + propriete.getNbDeChiffreCombinaison() +"-");
-			else
+						+ "-nbre coup max : "+ Proprietes.getInstance().getNbDeCoupMax() + " / nbre chiffre combinaison : " + Proprietes.getInstance().getNbDeChiffreCombinaison() +"-");
+				
+		 }else 
 				System.out.println("---------------------------------------------------");
 				System.out.println("---------------------------------------------------\n");
 			System.out.print("Selectionnez un mode de jeu : ");
@@ -56,12 +57,14 @@ public class EscapeGame {
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
 				System.out.print(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
+				if(VerificationSaisie.SiEntrerClavierEstVrai)
+					logger.info("erreur saisie du mode de jeu, le joueur a rentré : " + choixDuMenu);
 			} while (VerificationSaisie.SiEntrerClavierEstVrai);
 						
 			switch (choixDuMenu) {
 			case "1":
 				
-				EscapeGame.presentationModeChallenger(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				EscapeGame.presentationModeChallenger(Proprietes.getInstance().getNbDeCoupMax(), Proprietes.getInstance().getNbDeChiffreCombinaison());
 				
 				do {
 					joueurDefenseur = new Ordinateur("Defenseur");
@@ -75,6 +78,8 @@ public class EscapeGame {
 						choixDuMenu = sc.nextLine();
 						verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
 						System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+						if(VerificationSaisie.SiEntrerClavierEstVrai)
+							logger.info("erreur saisie du choix en fin de partie, le joueur a rentré : " + choixDuMenu);
 						if (choixDuMenu.isEmpty() == false)
 							caracChoixMenu = choixDuMenu.charAt(0);
 					} while (caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -85,7 +90,7 @@ public class EscapeGame {
 
 			case "2":
 				
-				EscapeGame.presentationModeDefenseur(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				EscapeGame.presentationModeDefenseur(Proprietes.getInstance().getNbDeCoupMax(), Proprietes.getInstance().getNbDeChiffreCombinaison());
 				
 				do {
 					joueurDefenseur = new Humain("Defenseur");
@@ -99,6 +104,8 @@ public class EscapeGame {
 						choixDuMenu = sc.nextLine();
 						verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
 						System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+						if(VerificationSaisie.SiEntrerClavierEstVrai)
+							logger.info("erreur saisie du choix en fin de partie, le joueur a rentré : " + choixDuMenu);
 						if (choixDuMenu.isEmpty() == false)
 							caracChoixMenu = choixDuMenu.charAt(0);
 					} while (caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -109,7 +116,7 @@ public class EscapeGame {
 
 			case "3":
 				
-				EscapeGame.presentationModeDuel(propriete.getNbDeCoupMax(), propriete.getNbDeChiffreCombinaison());
+				EscapeGame.presentationModeDuel(Proprietes.getInstance().getNbDeCoupMax(), Proprietes.getInstance().getNbDeChiffreCombinaison());
 				
 				do {
 					joueurDefenseur = new Ordinateur("Ordinateur");
@@ -123,6 +130,8 @@ public class EscapeGame {
 						choixDuMenu = sc.nextLine();
 						verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu);
 						System.out.print(verificationSaisie.erreurDeSaisieFinDePartie(choixDuMenu));
+						if(VerificationSaisie.SiEntrerClavierEstVrai)
+							logger.info("erreur saisie du choix en fin de partie, le joueur a rentré : " + choixDuMenu);
 						if (choixDuMenu.isEmpty() == false)
 							caracChoixMenu = choixDuMenu.charAt(0);
 					} while (caracChoixMenu != 'O' && caracChoixMenu != 'M' && caracChoixMenu != 'Q');
@@ -186,7 +195,7 @@ public class EscapeGame {
 		System.out.println("----------------ORDINATEUR VS VOUS-----------------");
 		System.out.println("---------------------------------------------------");
 		System.out.println("-soyez le premier à trouver la combinaison mystère-");
-		System.out.println("-------------à " + nbChiffreCombinaison + " chiffres en " + nbDeCoup + " coups max-----------");
+		System.out.println("-------------à " + nbChiffreCombinaison + " chiffres en " + nbDeCoup + " coups max----------");
 		System.out.println("---------------------------------------------------\n\n");
 	}
 

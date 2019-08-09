@@ -1,23 +1,101 @@
-
-16:45:02.623 [RecherchePlusMoins] INFO  fr.alex.main.Main - le main est lancé
-16:45:10.983 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 55
-16:45:10.984 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 55
-16:48:59.578 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 55
-16:48:59.582 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 55
-16:49:02.374 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 186461
-16:49:02.375 [RecherchePlusMoins] INFO  fr.alex.main.Main - erreur saisie de la combinaison, le joueur a rentré : 186461
-10:51:04.012 [RecherchePlusMoins] INFO  fr.alex.escapegame.Main - le main est lancé
-10:51:41.896 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-10:52:00.142 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-10:57:53.207 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-10:59:08.852 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-11:00:56.381 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-13:25:06.978 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-13:29:16.321 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-14:07:33.650 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-14:09:37.405 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-14:28:54.221 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-15:04:51.137 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-15:36:27.489 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-15:07:59.196 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
-15:16:57.101 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+09:50:16.916 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeChiffreCombinaison du fichier config était manquante ou incorrect est à été remplacée par 4, l'utilisateur a rentré : c4
+09:50:16.923 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du modeDeveloppeur du fichier config était manquante ou incorrect est à été remplacée par 0, l'utilisateur a rentré : a1
+09:50:21.166 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeCoupMax du fichier config était manquante ou incorrect est à été remplacée par 10, l'utilisateur a rentré : b10
+09:50:24.191 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : sdf
+09:50:26.606 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 456
+09:50:56.294 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 444444
+09:50:57.030 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : sdf
+09:51:30.608 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeChiffreCombinaison du fichier config était manquante ou incorrect est à été remplacée par 4, l'utilisateur a rentré : c4
+09:51:30.614 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du modeDeveloppeur du fichier config était manquante ou incorrect est à été remplacée par 0, l'utilisateur a rentré : a1
+09:52:38.363 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+09:52:38.368 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeChiffreCombinaison du fichier config était manquante ou incorrect est à été remplacée par 4, l'utilisateur a rentré : c4
+09:52:38.371 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du modeDeveloppeur du fichier config était manquante ou incorrect est à été remplacée par 0, l'utilisateur a rentré : a1
+09:52:44.351 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 654
+09:52:45.142 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : sdf
+09:52:46.023 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeCoupMax du fichier config était manquante ou incorrect est à été remplacée par 10, l'utilisateur a rentré : b10
+09:53:27.895 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : dfg
+09:53:31.766 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 456
+09:53:34.559 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie des indices, le joueur a rentré : 456
+09:53:35.518 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie des indices, le joueur a rentré : dfg
+17:56:39.108 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+17:56:39.113 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeChiffreCombinaison du fichier config était manquante ou incorrect est à été remplacée par 4, l'utilisateur a rentré : c4
+17:56:39.116 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du modeDeveloppeur du fichier config était manquante ou incorrect est à été remplacée par 0, l'utilisateur a rentré : a1
+17:57:03.825 [RecherchePlusMoins] WARN  fr.alex.escapegame.EscapeGame - la valeur du nbDeCoupMax du fichier config était manquante ou incorrect est à été remplacée par 10, l'utilisateur a rentré : b10
+18:01:41.223 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:02:30.146 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:03:23.747 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:04:04.509 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:04:15.402 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 444
+18:05:27.357 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:05:30.425 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44
+18:05:38.210 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 4fd
+18:06:37.714 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : d
+18:06:47.226 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : d
+18:06:49.010 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : ds
+18:09:10.874 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:09:13.210 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 5
+18:09:15.858 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 65
+18:09:17.642 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : sfd
+18:09:45.234 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 4444
+18:10:12.121 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:10:14.891 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : sdf
+18:10:17.074 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : fsd
+18:10:19.474 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 4564
+18:10:22.418 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 44444444444444
+18:10:54.890 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 55555
+18:10:59.970 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 5555555555555555
+18:11:02.706 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 111111
+18:11:06.410 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 112
+18:11:08.186 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 21
+18:11:13.402 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 1111111111111
+18:11:15.874 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : wxc
+18:11:53.642 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 11f1
+18:12:42.203 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 72777
+18:13:22.850 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 321321
+18:13:23.786 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : wxc
+18:17:55.763 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 454654
+18:19:12.915 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie des indices, le joueur a rentré : cvg
+18:19:20.451 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie des indices, le joueur a rentré : ++++++
+18:20:10.828 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+09:15:25.630 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+09:25:53.392 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : dfs
+09:26:02.729 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 444444
+09:26:09.833 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44d4
+09:47:38.592 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+09:49:59.184 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : sdf
+09:50:18.785 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 4444444
+09:50:24.249 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44f4
+09:51:32.528 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : fs
+09:51:36.200 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 11
+11:46:42.127 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+11:49:26.551 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : sdf
+11:49:37.223 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44444
+11:49:43.271 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 444f
+12:03:45.953 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+12:04:04.585 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+12:04:54.583 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+12:05:11.430 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+12:07:14.318 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : fsfsd
+12:07:16.406 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : sdfza
+12:07:24.358 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 8888888
+12:07:30.766 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44f4
+13:08:01.803 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+16:28:54.181 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+16:29:26.861 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+16:31:16.989 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : rez
+16:31:24.779 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 4444444
+16:31:34.363 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44g4
+16:32:47.267 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : fdsf
+16:32:54.772 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du mode de jeu, le joueur a rentré : 11
+16:34:25.619 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : dfs
+16:34:31.139 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : G
+17:29:12.171 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+17:31:37.762 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : fsdf
+17:31:49.603 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 44444444
+17:32:08.291 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : sdf
+17:32:12.258 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie du choix en fin de partie, le joueur a rentré : 4
+18:02:16.861 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - le main est lancé
+18:04:06.266 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : zer
+18:04:20.938 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 444444
+18:04:32.642 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 4s44
+18:04:38.538 [RecherchePlusMoins] INFO  fr.alex.escapegame.EscapeGame - erreur saisie de la combinaison, le joueur a rentré : 

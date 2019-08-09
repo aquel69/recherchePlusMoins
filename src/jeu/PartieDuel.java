@@ -65,7 +65,6 @@ public class PartieDuel extends Parties {
 			affichageJeuEnCoursIndice();
 			String demandeIndice = joueurAttaquant.DonnerLesIndices();
 			indicesDefenseur.add(demandeIndice);
-
 			
 			nbDeCoupJoue++;
 		} while (nombreIndiceEgaleHumain != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
@@ -105,7 +104,6 @@ public class PartieDuel extends Parties {
 				//System.out.println("\n----------------------------------------------");
 				System.out.println("recapitulatif des anciennes propositions : ");
 			}
-
 			System.out.print("#" + (i+1) + " Combinaison " + propositionsCombinaisonAttaquant.get(i));
 			
 			if ( i == propositionsCombinaisonAttaquant.size() - 1)

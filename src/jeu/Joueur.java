@@ -11,8 +11,8 @@ import utils.VerificationSaisie;
  *
  */
 public abstract class Joueur {
-	Proprietes propriete = new Proprietes();
-	protected final String NB_DE_CHIFFRE_COMBINAISON = propriete.getNbDeChiffreCombinaison();
+	
+	protected final String NB_DE_CHIFFRE_COMBINAISON = Proprietes.getInstance().getNbDeChiffreCombinaison();
 
 	protected String nom;
 	protected Combinaison propositionCombinaison;

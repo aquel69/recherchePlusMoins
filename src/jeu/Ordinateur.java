@@ -38,10 +38,8 @@ public class Ordinateur extends Joueur {
 			combinaisonByte[i] = chiffreByte;
 			combinaisonString = combinaisonString + String.valueOf(chiffreInt);
 		}
-
 		Combinaison combinaison = new Combinaison(combinaisonByte);
 		return combinaison;
-
 	}
 	
 	/**
@@ -91,6 +89,7 @@ public class Ordinateur extends Joueur {
 		byte chiffre;
 		char ancienChiffreChar = combinaison.toString().charAt(i);
 		chiffre = (byte) Character.getNumericValue(ancienChiffreChar);
+		
 		return chiffre;
 	}
 

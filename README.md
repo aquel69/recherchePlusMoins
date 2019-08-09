@@ -4,7 +4,7 @@
 **1.Les Différents Modes**
 
 		*Le mode "Challenger" / Le joueur doit trouver la combinaison mystère en un nombre de coup limité.
-		*Le mode "Défenseur"  / Lejoueur donne une combinaison mystère et donne les indices à l'ordinateur afin que celui-ci trouve la combinaison en un nombre de coup limité.
+		*Le mode "Défenseur"  / Le joueur donne une combinaison mystère et les indices nécessaires à l'ordinateur pour qu'il puisse trouver la combinaison en un nombre de coup limité.
 		*Le Mode "Duel"       / Le joueur joue contre l'ordinateur. Le premier à trouver la combinaison mystère de l'autre dans le nombre de coup imparti à gagné.
 		
 **2.Lancer l'application avec éclipse **
@@ -24,8 +24,24 @@
 			 -> Advanced -> Add Folders -> puis sélectionner le fichier "ressources" dans votre projet -> apply -> run
 		13. Le programme se lance
 		
-**3.Lancer l'application en mode console
+**3.Lancer l'application en mode console **
 
-		1. 
+		1. Mettre le fichier recherchePlusMoins.jar dans un dossier
+		2. Extraire les fichiers du recherchePlusMoins.jar dans le dossier
+		3. Lancez un terminal(cmder, gitbash...) à partir du dossier
+		4. entrer la ligne de commande suivante : java -Dfile.encoding=UTF-8 -classpath "C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\bin;
+		C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-api-2.12.0.jar;C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-core-2.12.0.jar;
+		C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\ressources"fr.alex.escapegame.EscapeGame
+		5. faire entrer et le programme se lance
+		
+
+**4.Fichier .properties**
+
+		1. Le mode développeur donne la solution de la combinaison mystère. Pour l'activer mettre 1 en valeur ou 0 pour le désactiver
+		2. Le nombre de coup maximum détermine le nombre de coup au joueur attaquant pour trouver la combinaison mystère
+		3. Le nombre de chiffre combinaison détermine le nombre de chiffre composant la combinaison	
+
+		
+		
 		
 		
