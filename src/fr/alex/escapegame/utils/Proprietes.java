@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 import fr.alex.escapegame.EscapeGame;
 
 /**
- * classe permettant de lire et de gérer le fichier config.properties
+ * Class permettant de lire et de gérer le fichier config.properties.
  * @author alex
  *
  */
@@ -25,7 +25,7 @@ public class Proprietes {
 	
 
 	/**
-	 * constructeur permettant d'indiquer l'emplacement du fichier "config.properties" et d'enregistrer les données du fichier, dans des variables
+	 * Constructeur permettant d'indiquer l'emplacement du fichier "config.properties" et d'enregistrer les données du fichier, dans des variables.
 	 */
 	private Proprietes() {
 		try {
@@ -41,13 +41,12 @@ public class Proprietes {
 		}
 	}
 	
-	
+		
 	/**
-	 * Charge la liste des propriétés contenu dans le fichier spécifié
-	 * fonction permettant de Charger la liste des propriétés contenu dans le fichier spécifié
-	 * 
+	 * Fonction permettant de Charger la liste des propriétés contenu dans le fichier spécifié.
 	 * @param filename le fichier contenant les propriétés
 	 * @return un objet Properties contenant les propriétés du fichier
+	 * @throws IOException erreur levée
 	 */
 	public static Properties load(String filename) throws IOException {
 		Properties properties = new Properties();
@@ -64,7 +63,7 @@ public class Proprietes {
 	}
 	
 	/**
-	 * design pattern singleton permettant d'instancier une seul fois la classe Proprietes
+	 * Design pattern singleton permettant d'instancier une seul fois la classe Proprietes.
 	 * @return l'instance de la classe Proprietes
 	 */
 	public static synchronized Proprietes getInstance() {
@@ -77,7 +76,7 @@ public class Proprietes {
 	
 	
 	/**
-	 * fonction permettant de savoir si le Character compris dans une chaine est une lettre ou pas
+	 * Fonction permettant de savoir si le Character compris dans une chaine est une lettre ou pas.
 	 * @param val de type String chaîne entrée pour la vérification
 	 * @return un booleen 
 	 */
@@ -93,7 +92,7 @@ public class Proprietes {
 	}
 
 	/**
-	 * la fonction permet de retourner le nombre de coup maximum en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte 
+	 * La fonction permet de retourner le nombre de coup maximum en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte .
 	 * @return une variable de type String donnant le nombre de coup maximum
 	 */
 	public String getNbDeCoupMax() {
@@ -107,7 +106,7 @@ public class Proprietes {
 	}
 	
 	/**
-	 * la fonction permet de retourner le nombre du mode développeur en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte 
+	 * La fonction permet de retourner le nombre du mode développeur en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte.
 	 * @return une variable de type String donnant le nombre du mode développeur
 	 */
 	public String getModeDeveloppeur() {
@@ -120,7 +119,7 @@ public class Proprietes {
 	}
 	
 	/**
-	 * la fonction permet de retourner le nombre de chiffre compris dans la combinaison, en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte 
+	 * La fonction permet de retourner le nombre de chiffre compris dans la combinaison, en vérifiant si la valeur entrée dans le fichier "config.properties" est correcte.
 	 * @return une variable de type String donnant le nombre de chiffre compris dans la combinaison
 	 */
 	public String getNbDeChiffreCombinaison() {

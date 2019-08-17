@@ -3,7 +3,7 @@ package fr.alex.escapegame.jeu;
 import java.util.ArrayList;
 
 /**
- * class partie Duel permettant la mise en place et le déroulement du mode "Duel"
+ * Class partie Duel permettant la mise en place et le déroulement du mode "Duel".
  * 
  * @author alex
  *
@@ -11,9 +11,11 @@ import java.util.ArrayList;
 public class PartieDuel extends Parties {
 	
 	/**
-	 * 
-	 * @param jDefenseur 
-	 * @param jAttaquant
+	 * Constructeur de la Partie Duel contenant en paramètre les deux joueurs de Type Joueur.
+	 * Les Lists contiennent la propositions jouée par le Joueur,
+	 * ainsi que les indices donnant les indications pour trouver la solution pour les deux types de joueurs.
+	 * @param jDefenseur joueur defenseur
+	 * @param jAttaquant joueur attaquant
 	 */
 	public PartieDuel(Joueur jDefenseur, Joueur jAttaquant) {
 		super(jDefenseur, jAttaquant);
@@ -26,11 +28,10 @@ public class PartieDuel extends Parties {
 	}
 	
 	/**
-	 * 
 	 * La fonction jouer est le coeur du déroulement de la partie.
-	 * elle gère les demandes succesives des joueurs et compare les combinaisons
-	 * grace la boucle principale, tant que la combinaison n'est pas trouvée
-	 * ou que la limite de nombre de coups est atteinte
+	 * Elle gère les demandes succesives des joueurs et compare les combinaisons,
+	 * grace la boucle principale, tant que la combinaison n'est pas trouvée,
+	 * ou que la limite de nombre de coups est atteinte.
 	 */
 	 
 	public void Jouer() {
@@ -76,7 +77,7 @@ public class PartieDuel extends Parties {
 	}
 	
 	/**
-	 * la fonction sert à afficher la combinaison proposée par l'ordinateur et la combinaison mystère afin de comparer les deux combinaisons
+	 * La fonction sert à afficher la combinaison proposée par l'ordinateur et la combinaison mystère afin de comparer les deux combinaisons.
 	 */
 	public void affichageJeuEnCoursIndice() {
 		//System.out.println("----------------------------------------------");
@@ -86,7 +87,7 @@ public class PartieDuel extends Parties {
 	}
 	
 	/**
-	 * la fonction sert à afficher les indices correspondant à la combinaison proposée
+	 * La fonction sert à afficher les indices correspondant à la combinaison proposée.
 	 */
 	public void affichageDeLaProposition() {
 		System.out.print("Combinaison " + propositionsCombinaisonAttaquant.get(nbDeCoupJoue));
@@ -95,7 +96,7 @@ public class PartieDuel extends Parties {
 	
 	
 	/**
-	 * la fonction sert à afficher les combinaisons et indices jouées précedemment par le joueur
+	 * La fonction sert à afficher les combinaisons et indices jouées précedemment par le joueur.
 	 */
 	public void affichageJeuEnCours() {
 
@@ -114,11 +115,11 @@ public class PartieDuel extends Parties {
 	}
 	
 	/**
-	 * la fonction retourne le résultat final de la partie 
+	 * La fonction retourne le résultat final de la partie :
 	 * gagnant si le joueur à trouvé la combinaison mystère avant l'ordinateur
 	 * perdant si l'ordinateur à trouvé la combinaison mystère avant le joueur
 	 * égalité si les deux joueurs finissent en même temps
-	 * perdu pour les deux joueurs si le nombre de coups est dépassé sans avoir trouvé la combinaison mystère
+	 * perdu pour les deux joueurs si le nombre de coups est dépassé sans avoir trouvé la combinaison mystère.
 	 * 
 	 * @return le message du résultat final sur la console
 	 */
@@ -138,14 +139,14 @@ public class PartieDuel extends Parties {
 	}
 	
 	/**
-	 * la fonction affiche que c'est au joueur de jouer
+	 * La fonction affiche que c'est au joueur de jouer.
 	 */
 	public void auJoueurDeJouer() {
 		System.out.println("\n-------------------A VOUS DE JOUER-----------------\n");
 	}
 	
 	/**
-	 * la fonction indique que c'est à l'ordinateur de jouer
+	 * La fonction indique que c'est à l'ordinateur de jouer.
 	 */
 	public void aLOrdinateurDeJouer() {
 		System.out.println("\n---------------A L'ORDINATEUR DE JOUER-------------\n");

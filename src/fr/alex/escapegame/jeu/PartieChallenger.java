@@ -3,7 +3,7 @@ package fr.alex.escapegame.jeu;
 import java.util.ArrayList;
 
 /**
- * class partie Challenger permettant la mise en place et le déroulement du mode "Challenger"
+ * Class partie Challenger permettant la mise en place et le déroulement du mode "Challenger".
  * 
  * @author alex
  *
@@ -28,9 +28,9 @@ public class PartieChallenger extends Parties {
 	
 	/**
 	 * La fonction jouer est le coeur du déroulement de la partie.
-	 * elle gère les demandes succesives des joueurs et compare les combinaisons
+	 * Elle gère les demandes succesives des joueurs et compare les combinaisons
 	 * grace la boucle principale, tant que la combinaison n'est pas trouvée
-	 * ou que la limite de nombre de coups est atteinte
+	 * ou que la limite de nombre de coups est atteinte.
 	 */
 	public void Jouer() {
 		aLOrdinateurDeJouer();
@@ -57,7 +57,7 @@ public class PartieChallenger extends Parties {
 	}
 
 	/**
-	 * la fonction sert à afficher les combinaisons et indices jouées précedemment par le joueur
+	 * La fonction sert à afficher les combinaisons et indices jouées précedemment par le joueur.
 	 */
 	public void affichageJeuEnCours() {
 		for (int i = 0; i < propositionsCombinaisonAttaquant.size(); i++) {
@@ -68,9 +68,9 @@ public class PartieChallenger extends Parties {
 	}
 	
 	/**
-	 * la fonction affiche le résultat final de la partie
+	 * La fonction affiche le résultat final de la partie
 	 * gagnant si le joueur à trouvé la combinaison mystère 
-	 * perdant si le joueur n'a pas trouvé la combinaison dans le nombre de coup imparti
+	 * perdant si le joueur n'a pas trouvé la combinaison dans le nombre de coup imparti.
 	 * 
 	 * @return le message du résultat final sur la console
 	 */
@@ -86,14 +86,14 @@ public class PartieChallenger extends Parties {
 	}
 	
 	/**
-	 * la fonction affiche que c'est au joueur de jouer
+	 * La fonction affiche que c'est au joueur de jouer.
 	 */
 	public void auJoueurDeJouer() {
 		System.out.println("\n-------------------A VOUS DE JOUER-----------------\n");
 	}
 	
 	/**
-	 * la fonction indique que c'est à l'ordinateur de jouer
+	 * La fonction indique que c'est à l'ordinateur de jouer.
 	 */
 	public void aLOrdinateurDeJouer() {
 		System.out.println("\n---------------A L'ORDINATEUR DE JOUER-------------\n");

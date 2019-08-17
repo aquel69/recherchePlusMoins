@@ -6,7 +6,7 @@ import fr.alex.escapegame.utils.Proprietes;
 import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
- * la class Joueur est la classe mère permettant de définir les joueurs du fr.alex.escapegame.jeu
+ * La class Joueur est la classe mère permettant de définir les joueurs du jeu.
  * @author alex
  *
  */
@@ -20,9 +20,8 @@ public abstract class Joueur {
 	protected boolean verificationEntrerClavier = false;
 	VerificationSaisie verificationSaisie = new VerificationSaisie();
 
-	// constructeur qui a pour parametre le nom du joueur
 	/**
-	 * constructeur permettant de créér un joueur en lui donnant un nom
+	 * Constructeur permettant de créér un joueur en lui donnant un nom.
 	 * @param pNom de type String permet de donner un nom au Joueur
 	 */
 	public Joueur(String pNom) {

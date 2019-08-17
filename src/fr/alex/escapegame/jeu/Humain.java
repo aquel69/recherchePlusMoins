@@ -10,14 +10,14 @@ import fr.alex.escapegame.EscapeGame;
 import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
- * La classe Humain permet de créér un joueur de type humain
+ * La classe Humain permet de créér un joueur de type humain.
  * @author alex
- *
  */
 public class Humain extends Joueur {
+	
 	static Logger logger = LogManager.getLogger(EscapeGame.class);
 	/**
-	 * constructeur permettant de créér un joueur humain 
+	 * Constructeur permettant de créér un joueur humain.
 	 * @param pNom de type String permet de donner un nom au joueur humain
 	 */
 	public Humain(String pNom) {
@@ -25,13 +25,11 @@ public class Humain extends Joueur {
 	}
 
 	/**
-	 * 
-	 * fonction qui demande au joueur humain d'entrer la combinaison mystere dans une variable String
-	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison
+	 * Fonction qui demande au joueur humain d'entrer la combinaison mystere dans une variable String
+	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison.
 	 * 
 	 * @return la Combinaison mystere
-	 *
-	 */
+	  */
 	public Combinaison DonnerCombinaisonMystere() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -62,9 +60,8 @@ public class Humain extends Joueur {
 	}
 
 	/**
-	 * 
-	 * fonction qui demande au joueur humain d'entrer une proposition de combinaison dans une variable String
-	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison
+	 * Fonction qui demande au joueur humain d'entrer une proposition de combinaison dans une variable String
+	 * et la convertit en tableau byte pour l'entrer en paramètre du constructeur de la classe Combinaison.
 	 *  
 	 * @return la proposition combinaison du joueur humain
 	 */
@@ -97,7 +94,7 @@ public class Humain extends Joueur {
 	}
 	
 	/**
-	 * la fonction permet de demander au joueur humain les indices correspondant à la proposition du joueur ordinateur
+	 * La fonction permet de demander au joueur humain les indices correspondant à la proposition du joueur ordinateur.
 	 * 
 	 * @return une variable de type String contenant les indices 
 	 */

@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * La classe Ordinateur permet de créér un joueur de type ordinateur
+ * La classe Ordinateur permet de créér un joueur de type ordinateur.
  * @author alex
- *
  */
 public class Ordinateur extends Joueur {
 
@@ -18,8 +17,7 @@ public class Ordinateur extends Joueur {
 	}
 	
 	/**
-	 * 
-	 * fonction permettant de générer aléatoirement une combinaison mystère
+	 * Fonction permettant de générer aléatoirement une combinaison mystère.
 	 * 
 	 * @return Combinaison mystère du joueur Ordinateur	
 	 */
@@ -44,9 +42,9 @@ public class Ordinateur extends Joueur {
 	
 	/**
 	 * 
-	 * fonction permettant que l'ordinateur propose une combinaison en fonction des indices. 
+	 * Fonction permettant que l'ordinateur propose une combinaison en fonction des indices. 
 	 * La méthode dichotomique est utilisée pour l'algorithme
-	 * addition de la valeur mini et maxi divisé par deux
+	 * addition de la valeur mini et maxi divisé par deux.
 	 * 
 	 * @return Combinaison proposée par l'Ordinateur en fonction des indices donnés par le joueur humain
 	 */
@@ -80,11 +78,12 @@ public class Ordinateur extends Joueur {
 	}
 
 	/**
-	 * cette fonction permet à partir d'une combinaison de convertir le chiffre désiré en byte
-	 * @param combinaison
-	 * @param i
+	 * Cette fonction permet à partir d'une combinaison de convertir le chiffre désiré en byte.
+	 * @param combinaison à convertir
+	 * @param i entier correspondant à l'emplacement dans la combinaison
 	 * @return une variable de type byte 
 	 */
+	
 	public byte convertirCombinaisonsEnChiffre(Combinaison combinaison, int i) {
 		byte chiffre;
 		char ancienChiffreChar = combinaison.toString().charAt(i);

@@ -10,8 +10,7 @@ public class Combinaison {
 	private byte[] chiffres = null;
 
 	/**
-	 * constructeur de la classe Combinaison 
-	 * permet de creer les objets combinaison
+	 * Constructeur de la classe Combinaison permettant de gérer les différentes combinaisons.
 	 * 
 	 * @param chiffres tableau de byte contenant dans chaque emplacement un chiffre de la combinaison
 	 * la longueur du tableau dépend du nombre de chiffre entrer dans le fichier config.properties
@@ -22,7 +21,7 @@ public class Combinaison {
 	}
 	
 	/**
-	 * la fonction permet de connaitre les indices correspondant à la proposition
+	 * La fonction permet de connaitre les indices correspondant à la proposition.
 	 * @param combinaisonAttaquant de type Combinaison la combinaison du joueur qui attaque pour connaitre les indices correspondant 
 	 * @return la variable de type String contenant les indices
 	 */
@@ -50,7 +49,7 @@ public class Combinaison {
 	}
 	
 	/**
-	 * la fonction convertit le tableau byte en un String
+	 * La fonction convertit le tableau byte en un String.
 	 * @return la variable de type String contenant la combinaison
 	 */
 	public String toString() {

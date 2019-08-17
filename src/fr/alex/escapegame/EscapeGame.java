@@ -16,14 +16,13 @@ import fr.alex.escapegame.utils.Proprietes;
 import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
- * class main déroulement du fr.alex.escapegame.jeu
+ * Class main déroulement du jeu.
  * 
  * @author alex
  *
  */
 public class EscapeGame {
 	
-	//static Logger logger = LogManager.getLogger(EscapeGame.class);
 	
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger(EscapeGame.class);
@@ -51,14 +50,14 @@ public class EscapeGame {
 		 }else 
 				System.out.println("---------------------------------------------------");
 				System.out.println("---------------------------------------------------\n");
-			System.out.print("Selectionnez un mode de fr.alex.escapegame.jeu : ");
+			System.out.print("Selectionnez un mode de jeu : ");
 			
 			do {
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
 				System.out.print(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
 				if(VerificationSaisie.SiEntrerClavierEstVrai)
-					logger.info("erreur saisie du mode de fr.alex.escapegame.jeu, le joueur a rentré : " + choixDuMenu);
+					logger.info("erreur saisie du mode de jeu, le joueur a rentré : " + choixDuMenu);
 			} while (VerificationSaisie.SiEntrerClavierEstVrai);
 						
 			switch (choixDuMenu) {
@@ -148,22 +147,24 @@ public class EscapeGame {
 		System.out.println("Merci d'avoir joué avec nous!!!");
 
 	}
-
+	
 	/**
-	 * affichage du menu général
+	 * Affichage du menu général.
 	 */
 	public static void presentation() {
 
 		System.out.println("---------------------------------------------------\n"
 				+ "--------------- Jeu de Recherche +/----------------\n"
 				+ "---------------------------------------------------\n" + "1 - Mode Challenger\n"
-				+ "2 - Mode Defenseur\n" + "3 - Mode Duel\n" + "4 - Quitter le fr.alex.escapegame.jeu\n"
+				+ "2 - Mode Defenseur\n" + "3 - Mode Duel\n" + "4 - Quitter le jeu\n"
 				+ "---------------------------------------------------");
 
 	}
 	
 	/**
-	 * affichage du menu "challenger"
+	 * Affichage du menu "challenger".
+	 * @param nbDeCoup nombre de coup max
+	 * @param nbChiffreCombinaison nombre de chiffre compris dans la combinaison
 	 */
 	public static void presentationModeChallenger(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
@@ -174,7 +175,9 @@ public class EscapeGame {
 	}
 	
 	/**
-	 * affichage du menu "defenseur"
+	 * Affichage du menu "defenseur".
+	 * @param nbDeCoup nombre de coup max
+	 * @param nbChiffreCombinaison nombre de chiffre compris dans la combinaison
 	 */
 	public static void presentationModeDefenseur(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
@@ -186,7 +189,9 @@ public class EscapeGame {
 	}
 	
 	/**
-	 * affichage du menu "Duel"
+	 * Affichage du menu "Duel".
+	 * @param nbDeCoup nombre de coup max
+	 * @param nbChiffreCombinaison nombre de chiffre compris dans la combinaison
 	 */
 	public static void presentationModeDuel(String nbDeCoup, String nbChiffreCombinaison) {
 		System.out.println("\n---------------------------------------------------");
@@ -200,12 +205,12 @@ public class EscapeGame {
 	}
 
 	/**
-	 * affichage du menu de la fin de la partie
+	 * Affichage du menu de la fin de la partie.
 	 */
 	public static void propositionMenuFinDePartie() {
 		System.out.println("\nSouhaitez vous relancer une partie ? O pour oui");
 		System.out.println("Ou retourner au menu ? M pour menu");
-		System.out.println("Ou quitter le fr.alex.escapegame.jeu ? Q pour Quitter");
+		System.out.println("Ou quitter le jeu ? Q pour Quitter");
 	}
 
 }

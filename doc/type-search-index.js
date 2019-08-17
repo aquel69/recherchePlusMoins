@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"jeu","l":"Combinaison"},{"p":"fr.alex.escapegame","l":"EscapeGame"},{"p":"jeu","l":"Humain"},{"p":"jeu","l":"Joueur"},{"p":"jeu","l":"Ordinateur"},{"p":"jeu","l":"PartieChallenger"},{"p":"jeu","l":"PartieDefenseur"},{"p":"jeu","l":"PartieDuel"},{"p":"jeu","l":"Parties"},{"p":"utils","l":"Proprietes"},{"p":"utils","l":"VerificationSaisie"}]
+typeSearchIndex = [{"p":"fr.alex.escapegame.utils","l":"Proprietes"}]

@@ -6,7 +6,7 @@ import java.util.List;
 import fr.alex.escapegame.utils.Proprietes;
 
 /**
- * class mère partie permettant la mise en place et le déroulement des différentes parties
+ * Class mère partie permettant la mise en place et le déroulement des différentes parties.
  * 
  * @author alex
  *
@@ -33,9 +33,9 @@ public abstract class Parties {
 	protected List<String> indicesDefenseur;
 	
 	/**
-	 * constructeur des parties contenant en paramètre les deux joueurs de Type Joueur.
-	 * Les Lists contiennent les propositions jouées par les Joueurs
-	 * ainsi que les indices donnant les indications pour trouver la solution
+	 * Constructeur des parties contenant en paramètre les deux joueurs de Type Joueur.
+	 * Les Lists contiennent les propositions jouées par les Joueurs,
+	 * ainsi que les indices donnant les indications pour trouver la solution.
 	 * 
 	 * @param jDefenseur joueur défenseur qui donne la combinaison mystère
 	 * @param jAttaquant joueur attaquant qui doit trouver la combinaison mystère

@@ -1721,7 +1721,7 @@ var support = _dereq_('./support');
 var nodeBuffer = _dereq_('./nodeBuffer');
 
 /**
- * The following functions come from pako, from pako/lib/fr.alex.escapegame.utils/strings
+ * The following functions come from pako, from pako/lib/utils/strings
  * released under the MIT license, see pako https://github.com/nodeca/pako/
  */
 
@@ -2172,7 +2172,7 @@ exports.transformTo = function(outputType, input) {
 
 /**
  * Return the type of the input.
- * The type will be in a format valid for JSZip.fr.alex.escapegame.utils.transformTo : string, array, uint8array, arraybuffer.
+ * The type will be in a format valid for JSZip.utils.transformTo : string, array, uint8array, arraybuffer.
  * @param {Object} input the input to identify.
  * @return {String} the (lowercase) type of the input.
  */
@@ -6228,7 +6228,7 @@ function InflateState() {
    because we don't have pointers in js, we use lencode and distcode directly
    as buffers so we don't need codes
   */
-  //this.codes = new fr.alex.escapegame.utils.Buf32(ENOUGH);       /* space for code tables */
+  //this.codes = new utils.Buf32(ENOUGH);       /* space for code tables */
   this.lendyn = null;              /* dynamic table for length/literal codes (JS specific) */
   this.distdyn = null;             /* dynamic table for distance codes (JS specific) */
   this.sane = 0;                   /* if false, allow invalid distance too far */

@@ -3,7 +3,7 @@ package fr.alex.escapegame.utils;
 import java.util.Scanner;
 
 /**
- * classe permettant de vérifier les différentes saisies faite par le joueur
+ * Class permettant de vérifier les différentes saisies faite par le joueur.
  * @author alex
  *
  */
@@ -15,7 +15,7 @@ public class VerificationSaisie {
 
 	
 	/**
-	 * verification de la saisie pour la selection du mode de jeux
+	 * Verification de la saisie pour la selection du mode de jeux.
 	 * @param entrerClavier par le joueur de type String
 	 * @return une variable de type String donnant le type de l'erreur rencontré à la saisie
 	 */
@@ -41,7 +41,7 @@ public class VerificationSaisie {
 
 	
 	/**
-	 * verification de la saisie pour le menu fin de partie
+	 * Verification de la saisie pour le menu fin de partie.
 	 * @param entrerClavier par le joueur de type String
 	 * @return une variable de type String donnant le type de l'erreur rencontré à la saisie
 	 */
@@ -68,7 +68,7 @@ public class VerificationSaisie {
 	}
 
 	/**
-	 * verification de la saisie pour la saisie des chiffres
+	 * Verification de la saisie pour la saisie des chiffres.
 	 * @param entrerClavier par le joueur de type String
 	 * @return une variable de type String donnant le type de l'erreur rencontré à la saisie
 	 */
@@ -95,7 +95,7 @@ public class VerificationSaisie {
 	}
 
 	/**
-	 * verification de la saisie  pour les indices
+	 * Verification de la saisie  pour les indices.
 	 * @param entrerClavier par le joueur de type String
 	 * @return une variable de type String donnant le type de l'erreur rencontré à la saisie
 	 */
