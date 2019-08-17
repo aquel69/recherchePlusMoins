@@ -1,4 +1,4 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import fr.alex.escapegame.EscapeGame;
-import utils.VerificationSaisie;
+import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
  * La classe Humain permet de créér un joueur de type humain

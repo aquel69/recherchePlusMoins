@@ -1,9 +1,9 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import utils.Proprietes;
+import fr.alex.escapegame.utils.Proprietes;
 
 /**
  * class mère partie permettant la mise en place et le déroulement des différentes parties

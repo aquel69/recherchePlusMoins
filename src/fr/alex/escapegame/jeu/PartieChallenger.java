@@ -1,24 +1,24 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
 import java.util.ArrayList;
 
 /**
- * class partie Defenseur permettant la mise en place et le déroulement du mode "Défenseur"
+ * class partie Challenger permettant la mise en place et le déroulement du mode "Challenger"
  * 
  * @author alex
  *
  */
-public class PartieDefenseur extends Parties {
+public class PartieChallenger extends Parties {
 	
 	/**
-	 * Constructeur de la Partie Défenseur contenant en paramètre les deux joueurs de Type Joueur.
+	 * Constructeur de la Partie Challenger contenant en paramètre les deux joueurs de Type Joueur.
 	 * Les Lists contiennent la propositions jouée par le Joueur
 	 * ainsi que les indices donnant les indications pour trouver la solution
 	 * 
 	 * @param jDefenseur joueur défenseur qui donne la combinaison mystère
 	 * @param jAttaquant joueur attaquant qui doit trouver la combinaison mystère
 	 */
-	public PartieDefenseur(Joueur jDefenseur, Joueur jAttaquant) {
+	public PartieChallenger(Joueur jDefenseur, Joueur jAttaquant) {
 		super(jDefenseur, jAttaquant);
 		joueurAttaquant = jAttaquant;
 		joueurDefenseur = jDefenseur;
@@ -33,52 +33,54 @@ public class PartieDefenseur extends Parties {
 	 * ou que la limite de nombre de coups est atteinte
 	 */
 	public void Jouer() {
-		auJoueurDeJouer();
+		aLOrdinateurDeJouer();
 		combinaisonMystere = joueurDefenseur.DonnerCombinaisonMystere();
-		nombreIndiceEgaleOrdinateur = 0;
+		if (Integer.parseInt(MODE_DEVELOPPEUR) == 1)
+			System.out.println("La combinaison mystère est : " + combinaisonMystere);
+		nombreIndiceEgaleHumain = 0;
 		
 		//boucle principale
 		do {
-			aLOrdinateurDeJouer();
-			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaisonAttaquant,
-					indicesAttaquant);
+			if(nbDeCoupJoue == 0) {
+				auJoueurDeJouer();
+			}
+			Combinaison combinaisonProposee = joueurAttaquant.ProposerCombinaison(propositionsCombinaisonAttaquant,	indicesAttaquant);
+			String affichageIndice = combinaisonMystere.Comparer(combinaisonProposee);
 			propositionsCombinaisonAttaquant.add(combinaisonProposee);
+			indicesAttaquant.add(affichageIndice);
 			affichageJeuEnCours();
-			auJoueurDeJouer();
-			String demandeIndice = joueurDefenseur.DonnerLesIndices();
-			indicesAttaquant.add(demandeIndice);
 			nbDeCoupJoue++;
-		} while (nombreIndiceEgaleOrdinateur != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
+		} while (nombreIndiceEgaleHumain != Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON)
 				&& nbDeCoupJoue != Integer.parseInt(NB_DE_COUP_MAX));
-
-		System.out.println("\n----------------------------------------------");
+		
 		System.out.println(afficherResultat());
 	}
-	
+
 	/**
-	 * la fonction sert à afficher la combinaison proposée par l'ordinateur et la combinaison mystère afin de comparer les deux combinaisons
+	 * la fonction sert à afficher les combinaisons et indices jouées précedemment par le joueur
 	 */
 	public void affichageJeuEnCours() {
-		//System.out.println("----------------------------------------------");
-		System.out.println("Proposition combinaison de l'ordinateur : "
-				+ propositionsCombinaisonAttaquant.get(indicesAttaquant.size()));
-		System.out.println("------------------- Combinaison mystère : " + combinaisonMystere.toString());
+		for (int i = 0; i < propositionsCombinaisonAttaquant.size(); i++) {
+			System.out.print("\n#" + (i+1) + " Combinaison " + propositionsCombinaisonAttaquant.get(i));
+			System.out.print(" / Indices correspondant " + indicesAttaquant.get(i));
+		}
+		System.out.println("\n\n---------------------------------------------------\n");
 	}
 	
 	/**
 	 * la fonction affiche le résultat final de la partie
-	 * perdu pour le joueur si l'ordinateur a trouvé la combinaison mystère 
-	 * gagnant pour le joueur si l'ordinateur n'a pas trouvé la combinaison dans le nombre de coup imparti
+	 * gagnant si le joueur à trouvé la combinaison mystère 
+	 * perdant si le joueur n'a pas trouvé la combinaison dans le nombre de coup imparti
 	 * 
 	 * @return le message du résultat final sur la console
 	 */
 	public String afficherResultat() {
 		String messageFinal = "";
 
-		if (nombreIndiceEgaleOrdinateur == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
-			messageFinal = "\nVous avez perdu !! L'ordinateur a gagné en " + nbDeCoupJoue + " coups !!!";
+		if (nombreIndiceEgaleHumain == Integer.parseInt(NB_DE_CHIFFRE_COMBINAISON))
+			messageFinal = "\n" + "Vous avez gagné en : " + nbDeCoupJoue + " coups !!!\n";
 		else
-			messageFinal = "\nVous avez gagné!!!";
+			messageFinal = "\nVous avez perdu la solution était : " + combinaisonMystere +"\n";
 
 		return messageFinal;
 	}
@@ -96,5 +98,5 @@ public class PartieDefenseur extends Parties {
 	public void aLOrdinateurDeJouer() {
 		System.out.println("\n---------------A L'ORDINATEUR DE JOUER-------------\n");
 	}
-
+	
 }

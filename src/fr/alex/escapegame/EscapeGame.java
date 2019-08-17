@@ -5,18 +5,18 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import jeu.Humain;
-import jeu.Joueur;
-import jeu.Ordinateur;
-import jeu.PartieChallenger;
-import jeu.PartieDefenseur;
-import jeu.PartieDuel;
-import jeu.Parties;
-import utils.Proprietes;
-import utils.VerificationSaisie;
+import fr.alex.escapegame.jeu.Humain;
+import fr.alex.escapegame.jeu.Joueur;
+import fr.alex.escapegame.jeu.Ordinateur;
+import fr.alex.escapegame.jeu.PartieChallenger;
+import fr.alex.escapegame.jeu.PartieDefenseur;
+import fr.alex.escapegame.jeu.PartieDuel;
+import fr.alex.escapegame.jeu.Parties;
+import fr.alex.escapegame.utils.Proprietes;
+import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
- * class main déroulement du jeu
+ * class main déroulement du fr.alex.escapegame.jeu
  * 
  * @author alex
  *
@@ -40,7 +40,7 @@ public class EscapeGame {
 		Parties partie;
 		char caracChoixMenu = ' ';
 		
-		// boucle principale du déroulement du jeu
+		// boucle principale du déroulement du fr.alex.escapegame.jeu
 		do {
 			presentation();
 			if (Integer.parseInt(Proprietes.getInstance().getModeDeveloppeur()) == 1) {
@@ -51,14 +51,14 @@ public class EscapeGame {
 		 }else 
 				System.out.println("---------------------------------------------------");
 				System.out.println("---------------------------------------------------\n");
-			System.out.print("Selectionnez un mode de jeu : ");
+			System.out.print("Selectionnez un mode de fr.alex.escapegame.jeu : ");
 			
 			do {
 				choixDuMenu = sc.nextLine();
 				verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu);
 				System.out.print(verificationSaisie.erreurDeSaisieModeDeJeux(choixDuMenu));
 				if(VerificationSaisie.SiEntrerClavierEstVrai)
-					logger.info("erreur saisie du mode de jeu, le joueur a rentré : " + choixDuMenu);
+					logger.info("erreur saisie du mode de fr.alex.escapegame.jeu, le joueur a rentré : " + choixDuMenu);
 			} while (VerificationSaisie.SiEntrerClavierEstVrai);
 						
 			switch (choixDuMenu) {
@@ -157,7 +157,7 @@ public class EscapeGame {
 		System.out.println("---------------------------------------------------\n"
 				+ "--------------- Jeu de Recherche +/----------------\n"
 				+ "---------------------------------------------------\n" + "1 - Mode Challenger\n"
-				+ "2 - Mode Defenseur\n" + "3 - Mode Duel\n" + "4 - Quitter le jeu\n"
+				+ "2 - Mode Defenseur\n" + "3 - Mode Duel\n" + "4 - Quitter le fr.alex.escapegame.jeu\n"
 				+ "---------------------------------------------------");
 
 	}
@@ -205,7 +205,7 @@ public class EscapeGame {
 	public static void propositionMenuFinDePartie() {
 		System.out.println("\nSouhaitez vous relancer une partie ? O pour oui");
 		System.out.println("Ou retourner au menu ? M pour menu");
-		System.out.println("Ou quitter le jeu ? Q pour Quitter");
+		System.out.println("Ou quitter le fr.alex.escapegame.jeu ? Q pour Quitter");
 	}
 
 }

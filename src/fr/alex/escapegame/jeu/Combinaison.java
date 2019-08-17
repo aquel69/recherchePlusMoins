@@ -1,6 +1,6 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
-import utils.Proprietes;
+import fr.alex.escapegame.utils.Proprietes;
 
 public class Combinaison {
 	
