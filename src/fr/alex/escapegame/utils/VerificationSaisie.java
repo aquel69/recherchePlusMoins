@@ -1,4 +1,4 @@
-package utils;
+package fr.alex.escapegame.utils;
 
 import java.util.Scanner;
 

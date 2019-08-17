@@ -1,4 +1,4 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
 import java.util.List;
 import java.util.Random;

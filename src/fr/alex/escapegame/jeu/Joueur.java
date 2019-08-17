@@ -1,12 +1,12 @@
-package jeu;
+package fr.alex.escapegame.jeu;
 
 import java.util.List;
 
-import utils.Proprietes;
-import utils.VerificationSaisie;
+import fr.alex.escapegame.utils.Proprietes;
+import fr.alex.escapegame.utils.VerificationSaisie;
 
 /**
- * la class Joueur est la classe mère permettant de définir les joueurs du jeu
+ * la class Joueur est la classe mère permettant de définir les joueurs du fr.alex.escapegame.jeu
  * @author alex
  *
  */

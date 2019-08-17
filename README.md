@@ -1,4 +1,4 @@
-#recherche Plus / Moins ###
+# recherche Plus / Moins
 
 
 **1.Les Différents Modes**
@@ -7,7 +7,7 @@
 		*Le mode "Défenseur"  / Le joueur donne une combinaison mystère et les indices nécessaires à l'ordinateur pour qu'il puisse trouver la combinaison en un nombre de coup limité.
 		*Le Mode "Duel"       / Le joueur joue contre l'ordinateur. Le premier à trouver la combinaison mystère de l'autre dans le nombre de coup imparti à gagné.
 		
-**2.Lancer l'application avec éclipse **
+**2.Lancer l'application avec éclipse**
 
 		1. Allez dans le repo "recherchePlusMoins, trouver sur le site github à cette adresse(https://github.com/aquel69/recherchePlusMoins), puis dans "clone or download", copier le lien.  
 		2. Dans l'IDE éclipse faites : File -> Import
@@ -24,7 +24,7 @@
 			 -> Advanced -> Add Folders -> puis sélectionner le fichier "ressources" dans votre projet -> apply -> run
 		13. Le programme se lance
 		
-**3.Lancer l'application en mode console **
+**3.Lancer l'application en mode console**
 
 		1. Mettre le fichier recherchePlusMoins.jar dans un dossier
 		2. Extraire les fichiers du recherchePlusMoins.jar dans le dossier
