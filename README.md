@@ -29,9 +29,7 @@
 		1. Mettre le fichier recherchePlusMoins.jar dans un dossier
 		2. Extraire les fichiers du recherchePlusMoins.jar dans le dossier
 		3. Lancez un terminal(cmder, gitbash...) à partir du dossier
-		4. entrer la ligne de commande suivante : java -Dfile.encoding=UTF-8 -classpath "C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\bin;
-		C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-api-2.12.0.jar;C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-core-2.12.0.jar;
-		C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\ressources"fr.alex.escapegame.EscapeGame
+		4. entrer la ligne de commande suivante : java -Dfile.encoding=UTF-8 -classpath "C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\bin;C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-api-2.12.0.jar;C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\lib\log4j-core-2.12.0.jar;C:\Users\alex\Desktop\openclassrooms\projet 3\recherchePlusMoins\ressources" fr.alex.escapegame.EscapeGame
 		5. faire entrer et le programme se lance
 		
 
